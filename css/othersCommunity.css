@@ -1,0 +1,350 @@
+/*
+*  html5resetcss
+*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+ins{background-color:#ff9;color:#000;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+
+@font-face {
+  font-family: 'SpoqaHanSansNeo-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'SpoqaHanSansNeo-Regular';
+}
+
+/* 헤더 부분 */
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 1920px;
+}
+
+
+#header-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1440px;
+  margin: 0 auto;
+}
+
+#header-wrap #border{
+  border-bottom: solid 1px #E5E5E5;
+}
+
+#header-wrap #nav { 
+  width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  height: 62px; 
+  justify-content: space-between;
+  align-items: center;
+}
+#header-wrap #nav .sector {
+  line-height: 55px;
+  color: black;
+  margin-left: 10px;
+}
+#header-wrap #nav .right {
+  display: flex; 
+  padding : 0 0 0 24px;
+  gap: 9px;
+}
+#header-wrap #nav .left {
+  width: 181px;
+  height: 61px;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header-wrap #nav .left img{ 
+  width: 130px;
+  height: 37px;
+  margin-left: 26px;
+  margin: auto auto;
+}
+#header-wrap #nav .icons img{ 
+  width: 30px;
+  height: 30px;
+  padding: 15px;
+ }
+#header-wrap #nav .login { 
+  display: flex;
+  width: 92px;
+  height: 61px;
+  font-size: 16px;
+  border-left: 1px solid black;
+}
+#header-wrap #nav .login a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  text-decoration-line:none;
+  color: black;
+}
+
+#header-wrap {
+width: 100%;
+}
+
+#header-wrap .logo-wrap {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0 0 20px 0;
+}
+
+#header-wrap .logo-wrap img {
+width: 180px;
+padding: 30px 0 20px 0;
+}
+
+#header-wrap .logo-wrap p {
+font-size: 12px;
+color: #767676;
+text-align: center;
+}
+
+#header-wrap .category-wrap {
+  width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 19px 0 19px 0;
+  border-top: 1px solid #ACACA8;
+  border-bottom: 1px solid #ACACA8;
+  box-sizing: border-box;
+}
+#header-wrap .category-wrap .category {
+display: flex;
+align-items: center;
+margin-left: 26px;
+}
+#header-wrap .category-wrap .category ul {
+display: flex;
+flex-direction: row;
+}
+
+#header-wrap .category-wrap .category ul li {
+list-style: none;
+font-size: 16px;
+list-style: none;
+padding-right: 65px;
+}
+
+#header-wrap .category-wrap .category ul li:first-child{
+font-weight: 900;
+}
+
+#header-wrap .search img {
+padding: 0 12px;
+width: 22px;
+}
+
+.category-wrap .category li a:hover {
+  color: #FFC303;
+  
+}
+
+.myCommunity-wrapper{
+  width: 1920px;
+  height: 1158px;
+  border: solid 4px red;
+}
+
+.myCommunity{
+  width: 1920px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  height: 977px;
+  border: solid 4px black;
+}
+
+.first-section {
+  height: 154px;
+  width: 100%;
+  /* border: solid 4px black; */
+}
+
+
+.small-category-wrap {
+  width: 1440px;
+  height: 59px;
+  box-sizing: border-box;
+  border-bottom: solid 1px #ACACA8;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.small-category {
+  width: 342px;
+  height: 58px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.small-category ul {
+  width: 342px;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.small-category li a:hover {
+  color: #FFC303;
+}
+
+.myProfile-card-wrapper {
+  width: 270px;
+  height: 430px;
+  box-sizing: border-box;
+  border: solid 1px #828282;
+  border-radius: 20px;
+  box-shadow: 0 4px 4px #C0C0C0;
+}
+/* 프로필카드 보더까지의 스타일*/
+
+.myProfile-card-image{
+  width: 120px;
+  height: 154px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.myProfile-card-image .h4 {
+  margin-top: 10px;
+  font-weight: bold;
+
+}
+.myProfile-card-image img {
+  width: 120px;
+  height: 120px;
+}
+
+
+.myProfile-card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.myProfile-line {
+  width: 206px; 
+  height: 29px;
+  box-sizing: border-box;
+  border-bottom: solid 1px #676767;
+  margin-bottom: 29px;
+}
+
+.myProfile-button button{
+  background-color: #FFFFFF;
+  color: #131313;
+  border-radius: 25px;
+  border: solid 1px #131313;
+  font-size: 16px;
+  letter-spacing: -4%;
+  padding: 11px 17px 11px 17px;
+  font-weight: bold;
+}
+
+.myprofile-card-information {
+  width: 208px;
+  height: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 28px;
+}
+
+.myprofile-card-information .h6{
+  color: #828282;
+}
+
+.myProfile-card {
+  height: 430px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.my-written-wrapper {
+  width: 820px;
+  height: 445px;
+}
+
+.my-written {
+  margin-left: 59px;
+}
+
+.my-title {
+  font-weight: bold;
+  line-height: 24px;
+  margin-bottom: 17px;
+}
+
+.my-written-images ul {
+  width: 820px;
+  height: 404px;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.picture-wrapper {
+  width: 190px;
+  height: 190px;
+  position: relative;
+}
+
+.picture-wrapper button {
+  position: absolute;
+  right: 13px;
+  top: 16px;
+  background-color: transparent;
+}
+
+.modify-button img{
+  color: #FFFFFF;
+}
+
+.powpow-info {
+  margin-top: 70px;
+}

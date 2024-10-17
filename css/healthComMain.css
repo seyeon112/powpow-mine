@@ -1,0 +1,293 @@
+/*
+*  html5resetcss
+*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+ins{background-color:#ff9;color:#000;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+
+@font-face {
+  font-family: 'SpoqaHanSansNeo-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'SpoqaHanSansNeo-Regular';
+}
+
+.healthComMain-wrapper {
+  width: 1920px;
+  height: 3164px;
+  border: solid 4px black;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+
+.main-banner img{
+  width: 1440px;
+  height: 611px;
+  border-radius: 20px;
+}
+
+.section-banner {
+  display: block;
+  height: 78px;
+}
+
+.recommend-category-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 374px;
+  width: 1440px;
+  /* border: solid 4px black; */
+}
+
+.recommend-category-post-wrapper ul {
+  height: 302px;
+  width: 1440px;
+  /* border: solid 4px red; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.recommend-category .h3 {
+  margin-bottom: 36px;
+  font-weight: bold;
+}
+
+.recommend-category-post-wrapper li {
+  position: relative;
+}
+
+.post-info-click-wrapper {
+  position: relative;
+}
+
+.post-info-click {
+  width: 220px;
+  height: 302px;
+  /* border: 4px black solid; */
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.post-text {
+  margin-top: 14px;
+  margin-left: 13px;
+}
+
+.post-text-black {
+  margin-top: 13px;
+  margin-left: 14px;
+  font-weight: bold;
+}
+
+.post-text-blacks {
+  margin-left: 14px;
+  font-weight: bold;
+}
+
+.post-text .h5 {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.like-button1 {
+  right: 17px;
+  bottom: 17px;
+  position: absolute;
+}
+
+.recommend-category-post button{
+  position: absolute;
+  right: 0px;
+  bottom: 40%;
+  transform: translate(40px);
+}
+
+.recommend-category-post ul{
+  position: relative;
+}
+
+.recommend-info .h3 {
+  font-weight: bold;
+}
+
+.section1 {
+  margin-top: 54px;
+}
+
+.info-wrapper .infos{
+  /* border: solid 4px black; */
+  margin-top: 40px;
+  width: 1429px;
+  height: 211px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cat-info {
+  width: 233px;
+  height: 211px;
+}
+
+.cat-info-title {
+  width: 233px;
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cat-info-title img{
+  width: 58px;
+  height: 55px;
+  
+}
+
+.cat-info-title .h2{
+  font-weight: bold;
+  color: #ACACAC;
+}
+
+.dog-info-title {
+  width: 233px;
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dog-info-title img{
+  width: 46px;
+  height: 46px;
+  
+}
+
+.dog-info-title .h2{
+  font-weight: bold;
+  color: #ACACAC;
+}
+
+
+.bird-info-title {
+  width: 233px;
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bird-info-title img{
+  width: 46px;
+  height: 46px;
+  
+}
+
+.bird-info-title .h2{
+  font-weight: bold;
+  color: #ACACAC;
+}
+
+.fish-info-title {
+  width: 233px;
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fish-info-title img{
+  width: 46px;
+  height: 46px;
+  
+}
+
+.fish-info-title .h2{
+  font-weight: bold;
+  color: #ACACAC;
+}
+
+
+
+.tag {
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  border: solid 1px #ACACA8;
+  border-radius: 20px;
+  padding: 5px 15px 5px 15px;
+}
+
+.tag-yellow {
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+  border: solid 1px #FFC303;
+  border-radius: 20px;
+  padding: 5px 15px 5px 15px;
+}
+
+.tag-wrapper {
+  width: 197px;
+  height: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* border: solid 1px black; */
+  margin-top: 15px;
+}
+
+.info-list ul{
+  width: 233px;
+  height: 87px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info-list {
+  margin-top: 15px;
+}
+
+
+/* 섹션 2 */
+
+.section2 {
+  margin-top: 83px;
+}
+
+.event2 {
+  margin-top: 54px;
+}
+
+.event2 img{
+  width: 1440px;
+  height: 300px;
+  align-items: center;
+  margin: 0 auto;
+
+}
+
+.section3 {
+  height: 79px;
+}
