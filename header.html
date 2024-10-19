@@ -16,50 +16,97 @@
                 </div>
                 <div class="right">
                   <div class="icons">
-                    <img src="./images/search_icon 2.jpg" alt="검색">
-                    <img src="./images/truck_transport_icon 2.jpg" alt="배송">
-                    <img src="./images/shopping_cart_icon 2.jpg" alt="카트">
+                    <a href="#"><img src="./images/search_icon 2.jpg" alt="검색"></a>
+                    <a href="#"><img src="./images/truck_transport_icon 2.jpg" alt="배송"></a>
+                    <a href="#"><img src="./images/shopping_cart_icon 2.jpg" alt="카트"></a>
                   </div>
-                  <div class="sector">|</div>
-                  <div class="login"><a href="#">로그인</a></div>
+                  <div class="sector"></div>           
+                    <div class="login"><a href="#">로그인</a></div>
                 </div>
               </div>
-          <div class="category-wrap">
-              <div class="category h4">
-                <ul>
-                  <li class="category-menu"><a href="#">스토어</a></li>
-                  <li class="category-menu"><a href="#">커뮤니티</a></li>
-                  <li class="category-menu"><a href="#">마이펫</a></li>
-                  <li class="category-menu"><a href="#">이벤트</a></li>
+              <div class="menu-container">
+                <ul class="menu-wrap h4">
+                  <li class="menu"><a href="#">스토어</a></li>
+                  <li class="menu"><a href="#">커뮤니티</a></li>
+                  <li class="menu"><a href="#">마이홈</a></li>
+                  <li class="menu"><a href="#">이벤트</a></li>
                 </ul>
-               </div>
+                <div id="sector"></div>
+                <div class="sub-menu-wrap">
+                  <ul>
+                    <li class="sub-menu"><a href="#">강아지</a></li>
+                    <li class="sub-menu"><a href="#">고양이</a></li>
+                    <li class="sub-menu"><a href="#">새</a></li>
+                    <li class="sub-menu"><a href="#">물고기</a></li>
+                    <li class="sub-menu"><a href="#">헬스+</a></li>
+                  </ul>
+                  <ul>
+                    <li class="sub-menu"><a href="#">홈</a></li>
+                    <li class="sub-menu"><a href="#">헬스+</a></li>
+                  </ul>
+                  <ul>
+                    <li class="sub-menu"><a href="#">나의 정보</a></li>
+                    <li class="sub-menu"><a href="#">반려동물 정보</a></li>
+                    <li class="sub-menu"><a href="#">나의 쇼핑</a></li>
+                    <li class="sub-menu"><a href="#">내 게시글</a></li>
+                  </ul>
+
+                  <ul>
+                    <li class="sub-menu"><a href="#"></a></li>
+                    <li class="sub-menu"><a href="#"></a></li>
+                    <li class="sub-menu"><a href="#"></a></li>
+                    <li class="sub-menu"><a href="#"></a></li>
+                  </ul>
+
+                </div>
               </div>
-              <div class="category-sub h5">
-                
-                  <a class="category-sub-menu" href="#">강아지</a>
-                  <a class="category-sub-menu" href="#" >홈</a>
-                  <a class="category-sub-menu" href="#">&emsp;나의 정보</a>
-                
-                
-                <a class="category-sub-menu" href="#">고양이</a>
-                <a class="category-sub-menu" href="#">헬스 +</a>
-                <a class="category-sub-menu" href="#">&emsp;반려동물 정보</a>
-                
-                <a class="category-sub-menu" href="#">새</a>
-                <a class="category-sub-menu empty"></a>
-                <a class="category-sub-menu" href="#">&emsp;나의 쇼핑</a>
-                 
-                <a class="category-sub-menu" href="#">물고기</a>
-                <a class="category-sub-menu empty"></a>
-                <a class="category-sub-menu" href="#">&emsp;내 게시글</a>
-
-                <a class="category-sub-menu" href="#">헬스+</a>
-                <a class="category-sub-menu empty"></a>
-                <a class="category-sub-menu empty"></a>
-                
-            </div>
-
-        
       </div>
     </div>
   </div>
+  </body>
+  <script>
+const mainMenus = document.querySelectorAll(".menu-wrap .menu");
+const subMenuUl = document.querySelectorAll(".sub-menu-wrap ul");
+const subMenuAll = document.querySelector(".sub-menu-wrap");
+const subMenus = document.querySelectorAll(".sub-menu-wrap .sub-menu");
+
+let count = 0;
+let hoverTimeout; // 타임아웃을 저장할 변수
+
+mainMenus.forEach((menu) => {
+  menu.addEventListener("mouseover", () => {
+    clearTimeout(hoverTimeout); // 기존에 설정된 타임아웃이 있으면 제거
+    subMenuUl.forEach((ul) => {
+      ul.style.height = "250px";
+      ul.style.backgroundColor = "white";
+    });
+  });
+
+  menu.addEventListener("mouseleave", () => {
+    hoverTimeout = setTimeout(() => {
+      subMenuUl.forEach((ul) => {
+        ul.style.height = "0";
+        ul.style.backgroundColor = "none";
+      });
+    }, 100); // 100ms 지연 후 메뉴를 닫음
+  });
+});
+
+subMenus.forEach((sub, i) => {
+  sub.addEventListener("mouseover", () => {
+    clearTimeout(hoverTimeout); // 서브메뉴에서도 마우스 오버 시 타임아웃 제거
+    subMenuUl.forEach((ul) => {
+      ul.style.height = "250px";
+    });
+  });
+
+  sub.addEventListener("mouseleave", () => {
+    hoverTimeout = setTimeout(() => {
+      subMenuUl.forEach((ul) => {
+        ul.style.height = "0";
+      });
+    }, 100); // 100ms 지연 후 서브메뉴를 닫음
+  });
+});
+  </script>
+  </html>

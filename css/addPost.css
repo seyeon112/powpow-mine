@@ -42,7 +42,9 @@ input,select{vertical-align:middle}
   margin-left: 1046px;
 }
 
-.addpic-wrapper button {
+.button-first a{
+  width: 68px;
+  height: 30px;
   background-color: #113F8A;
   border-radius: 20px;
   color: #FFFFFF;
@@ -51,6 +53,25 @@ input,select{vertical-align:middle}
   letter-spacing: -3%;
   padding: 4px 15px 4px 15px;
 }
+
+.choose-file-button {
+  width: 128px;
+  height: 30px;
+  background-color: #113F8A;
+  border-radius: 20px;
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -3%;
+  padding: 4px 15px 4px 15px;
+  cursor: pointer;
+}
+
+
+#file {
+  display: none;
+}
+
 
 .addpic-smallthumbnail {
   background-color: #D9D9D9;
@@ -64,9 +85,19 @@ input,select{vertical-align:middle}
   width: 150px;
   height: 150px;
   border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+}
+
+#plus-img {
+  position: absolute;
+  right: 42%;
+  bottom: 43%;
+}
+
+#file1 {
+  width: 150px;
+  height: 150px;
+  opacity: 0;
 }
 
 .addpic-pc{
@@ -122,4 +153,46 @@ input,select{vertical-align:middle}
   display: flex;
   flex-wrap: wrap;
 
+}
+
+.explain-box {
+  width: 464px;
+  height: 464px;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  border: solid 1px #828282;
+  border-radius: 20px;
+}
+
+.explain-wrapper {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  width: 464px;
+  height: 464px;
+  position: relative;
+}
+
+
+#explain {
+  width: 392px;
+  height: 392px;
+  background-color: none;
+  border: none;
+  position: absolute;
+  left: 38px;
+  top: 37px;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -3%;
+  outline: none;
+  resize: none;
+}
+
+
+.addpic-plus-button{
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
 }

@@ -266,7 +266,7 @@ width: 22px;
   width: 206px; 
   height: 29px;
   box-sizing: border-box;
-  border-bottom: solid 1px #676767;
+  border-bottom: solid 1px #888888;
   margin-bottom: 29px;
 }
 
@@ -277,7 +277,7 @@ width: 22px;
   border: solid 1px #131313;
   font-size: 16px;
   letter-spacing: -4%;
-  padding: 11px 17px 11px 17px;
+  padding: 11px 34px 11px 34px;
   font-weight: bold;
 }
 
@@ -303,48 +303,99 @@ width: 22px;
   margin: 0 auto;
 }
 
-.my-written-wrapper {
-  width: 820px;
-  height: 445px;
-}
 
-.my-written {
-  margin-left: 59px;
-}
-
-.my-title {
-  font-weight: bold;
-  line-height: 24px;
-  margin-bottom: 17px;
-}
-
-.my-written-images ul {
-  width: 820px;
-  height: 404px;
-  flex-direction: row;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  list-style: none;
-}
-
-.picture-wrapper {
-  width: 190px;
+.my-post-1 {
   height: 190px;
+  width: 190px;
   position: relative;
 }
 
-.picture-wrapper button {
-  position: absolute;
+.my-post-1 .post-button button {
   right: 13px;
   top: 16px;
   background-color: transparent;
+  position: absolute;
 }
 
-.modify-button img{
-  color: #FFFFFF;
+.modify-selector-wrap {
+  /* visibility: hidden; */
 }
 
-.powpow-info {
-  margin-top: 70px;
+
+.modify-selector-wrap {
+  width: 75px;
+  height: 75px;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.2);
+  position: absolute;
+  right: 0px;
+  top: 20px;
+  transform: translate(50px, 30%);
+  z-index: 100;
 }
+
+.modify-selector-box {
+  width: 75px;
+  height: 75px;
+
+}
+
+.modify-selector-box .first-button{
+  width: 75px;
+  height: 39px;
+  border-bottom: solid 1px #ccc;
+}
+
+.modify-selector-box .first-button .delete{
+  width: 75px;
+  height: 39px;
+  background-color: transparent;
+  padding: 13px 15px 8px 15px;
+  color: #B00000;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -3%;
+}
+
+.modify-selector-box .second-button .modify{
+  width: 75px;
+  height: 39px;
+  background-color: transparent;
+  padding: 8px 15px 14px 15px;
+  color: #B00000;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -3%;
+}
+
+.my-post-list ul{
+  list-style: none;
+  width: 820px;
+  height: 445px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.my-post .h5{
+  font-weight: bold;
+}
+
+.my-post-list {
+  width: 820px;
+  height: 404px;
+  display: flex;
+  flex-direction: column;
+}
+
+.my-post {
+  width: 820px;
+  height: 445px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 59px;
+}
+
