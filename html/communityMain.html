@@ -3,44 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/powpowcommunity/index.css">
+  <link rel="stylesheet" href="/powpowcommunity/header.css">
   <link rel="stylesheet" href="/powpowcommunity/css/communityMain.css">
   <title>포포 커뮤니티 화면</title>
 </head>
 <body>
   <!-- 커뮤니티 전체 영역 -->
   <div id="community-wrap">
-    <!-- 헤더 고정 영역 -->
-    <div id="community-header">
-      <div id="navigator">
-        <div class="left">
-          <img src="/powpowcommunity/images/PowPow (1) 4.png" alt="포포 로고">
-        </div>
-        <div class="right">
-          <div class="nav-wrap">
-            <div class="nav">
-              <ul>
-              <li class="nav-icons">
-                <img src="/powpowcommunity/images/8666693_search_icon.png" alt="검색">
-                <img src="/powpowcommunity/images/8666814_truck_transport_icon.png" alt="배송">
-                <img src="/powpowcommunity/images/8666616_shopping_cart_icon.png" alt="장바구니">
-                <div class="sector">|</div>
-                <div class="login">
-                  <a href="#">로그인</a>
+    <div class="header-container">
+      <div id="header-wrap">
+        <div id="border">
+                <div id="nav">
+                  <div class="left">
+                      <img src="/powpowcommunity/images/main-logo.png" alt="로고">
+                  </div>
+                  <div class="right">
+                    <div class="icons">
+                      <a href="#"><img src="/powpowcommunity/images/search_icon 2.jpg" alt="검색"></a>
+                      <a href="#"><img src="/powpowcommunity/images/truck_transport_icon 2.jpg" alt="배송"></a>
+                      <a href="#"><img src="/powpowcommunity/images/shopping_cart_icon 2.jpg" alt="카트"></a>
+                    </div>
+                    <div class="sector"></div>           
+                      <div class="login"><a href="#">로그인</a></div>
+                  </div>
                 </div>
-              </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="header-menu">
-        <div class="menu-category">
-          <ul>
-          <li class="category-menu">스토어</li>
-          <li class="category-menu">커뮤니티</li>
-          <li class="category-menu">마이홈</li>
-          <li class="category-menu">이벤트</li>
-         </ul>
+                <div class="menu-container">
+                  <ul class="menu-wrap h4">
+                    <li class="menu"><a href="#">스토어</a></li>
+                    <li class="menu"><a href="#">커뮤니티</a></li>
+                    <li class="menu"><a href="#">마이홈</a></li>
+                    <li class="menu"><a href="#">이벤트</a></li>
+                  </ul>
+                  <div id="sector"></div>
+                  <div class="sub-menu-wrap">
+                    <ul>
+                      <li class="sub-menu"><a href="#">강아지</a></li>
+                      <li class="sub-menu"><a href="#">고양이</a></li>
+                      <li class="sub-menu"><a href="#">새</a></li>
+                      <li class="sub-menu"><a href="#">물고기</a></li>
+                      <li class="sub-menu"><a href="#">헬스+</a></li>
+                    </ul>
+                    <ul>
+                      <li class="sub-menu"><a href="#">홈</a></li>
+                      <li class="sub-menu"><a href="#">헬스+</a></li>
+                    </ul>
+                    <ul>
+                      <li class="sub-menu"><a href="#">나의 정보</a></li>
+                      <li class="sub-menu"><a href="#">반려동물 정보</a></li>
+                      <li class="sub-menu"><a href="#">나의 쇼핑</a></li>
+                      <li class="sub-menu"><a href="#">내 게시글</a></li>
+                    </ul>
+  
+                    <ul>
+                      <li class="sub-menu"><a href="#"></a></li>
+                      <li class="sub-menu"><a href="#"></a></li>
+                      <li class="sub-menu"><a href="#"></a></li>
+                      <li class="sub-menu"><a href="#"></a></li>
+                    </ul>
+  
+                  </div>
+                </div>
         </div>
       </div>
     </div>
@@ -51,9 +74,11 @@
     <!-- 커뮤니티 광고 메인 배너 부분-->
 
     <div class="community-main-banner-wrapper">
-      <div class="community-main-banner">
-        <img src="/powpowcommunity/images/community_main_banner.png" alt="커뮤니티 메인 배너 이미지">
-      </div>
+      <a href="#">
+        <div class="community-main-banner">
+          <img src="/powpowcommunity/images/community_main_banner.png" alt="커뮤니티 메인 배너 이미지">
+        </div>
+      </a>
       <div class="community-banner-content">
         <strong class="community-banner-title">우리 가족 토리와 함께한 여름날 해변가 나들이</strong>
         <p class="community-banner-small-title">더 많은 이야기를 읽고싶다면? 포포의 커뮤니티에서 찾아보세요</p>
@@ -80,38 +105,45 @@
           <div class="community-main-post-image">
             <ul>
               <li>
-                <div class="community-main-post-new-image-wrapper">
-                  <div class="main-post-new-image"><img src="/powpowcommunity/images/plus.png" alt="추가하기 버튼"></div>
-                  <p class="get-my-image">내 게시물 추가하기 💛</p>
-                </div>
+            
+                  <div class="community-main-post-new-image-wrapper">
+                    <a href="#">
+                      <div class="main-post-new-image-box">
+                        <div class="main-post-new-image"><img src="/powpowcommunity/images/plus.png" alt="추가하기 버튼"></div>
+                        <p class="h6">내 게시물 추가하기 💛</p>
+                      </div>
+                    </a>
+                  </div>
+              
               </li>
-                <div class="community-post-image">
+                <a href="#" class="community-post-image">
                   <li>
                     <img src="/powpowcommunity/images/communitycat1.png" alt="내 게시물 이미지">
                   </li>
-                </div>
-                <div class="community-post-image">
+                </a>
+                <a href="#" class="community-post-image">
                   <li>
                     <img src="/powpowcommunity/images/communitycat2.png" alt="내 게시물 이미지2">
                   </li>
-                </div>
-                <div class="community-post-image">
+                </a>
+                <a href="#" class="community-post-image">
                   <li>
                     <img src="/powpowcommunity/images/communitycat3.png" alt="내 게시물 이미지3">
                   </li>
-                </div>
+                </a>
           
-                <div class="community-post-image">
+                <a href="#" class="community-post-image">
                   <li>
                     <img src="/powpowcommunity/images/communitycat4.png" alt="내 게시물 이미지4">
                   </li>
-                </div>
+                </a>
           
               </ul>
-              <button>
+              
+          </div>
+              <button class="community-post-button" style="cursor: pointer;">
                 <img src="/powpowcommunity/images/버튼.png" alt="버튼">
               </button>
-          </div>
         </div>
       
     </div>
@@ -126,81 +158,94 @@
 
       <div class="others-post-image-wrapper">
         <ul>
-          <li>
-            <div class="others-post-image">
-              <div class="main-others-post-new-image">
-                <div class="main-others-post-new-image-box">
-                  <img src="/powpowcommunity/images/plus.png" alt="추가하기 버튼">
-                  <p class="get-my-image">내 게시물 추가하기 🐾</p>
-                </div>
+        
+          <a href="#" class="new-image">
+            <button>
+            <img src="/powpowcommunity/images/plus.png" alt="플러스">
+            <p>내 게시물 추가하기 🐾</p>
+            </button>
+          </a>
+       
+
+        <li>
+          <img class="post-image" src="/powpowcommunity/images/dog5.png" alt="강아지">
+          <a href="#">
+            <div class="title-likes">
+              <div class="id">
+                <img src="/powpowcommunity/images/profileimage.png" alt="프로필사진">
+                <p class="h5">아이디</p>
               </div>
+              <a class="like-buttons">
+                <div class="like-button"><img src="/powpowcommunity/images/likebutton.png" alt="좋아요누르기 전"></div>
+                <div class="liked-button"><img src="/powpowcommunity/images/8666647_heart_icon 4_filled_yellow.png" alt="좋아요눌림"></div>
+              </a>
             </div>
-          </li>
- 
-          <li>
-            <div class="others-community-image">
-              <img src="/powpowcommunity/images/dog5.png" alt="다른사람 게시물 강아지 이미지">
-                <div class="profile">
-                  <img src="/powpowcommunity/images/profileimage.png" alt="프로필 이미지">
-                  <p class="member-id">아이디</p>
-                </div>
-                <div class="like">
-                  <img src="/powpowcommunity/images/likebutton.png" alt="좋아요">
-                </div>
-            </div>
-          </li>
+          </a>
+        </li>
 
-          <li>
-            <div class="others-community-image">
-              <img src="/powpowcommunity/images/cat3.png" alt="다른사람 게시물 고양이 이미지">
-                <div class="profile">
-                  <img src="/powpowcommunity/images/profileimage2.png" alt="프로필 이미지">
-                  <p class="member-id">아이디</p>
-                </div>
-                <div class="like">
-                  <img src="/powpowcommunity/images/likebutton.png" alt="좋아요">
-                </div>
+        <li>
+          <img class="post-image" src="/powpowcommunity/images/cat3.png" alt="고양이">
+          <a href="#">
+            <div class="title-likes">
+              <div class="id">
+                <img src="/powpowcommunity/images/profileimage2.png" alt="프로필사진">
+                <p class="h5">아이디</p>
+              </div>
+              <a class="like-buttons">
+                <div class="like-button"><img src="/powpowcommunity/images/likebutton.png" alt="좋아요누르기 전"></div>
+                <div class="liked-button"><img src="/powpowcommunity/images/8666647_heart_icon 4_filled_yellow.png" alt="좋아요눌림"></div>
+              </a>
             </div>
-          </li>
+          </a>
+        </li>
 
-          <li>
-            <div class="others-community-image">
-              <img src="/powpowcommunity/images/dog6.png" alt="다른사람 게시물 강아지2 이미지">
-                <div class="profile">
-                  <img src="/powpowcommunity/images/profileimage5.png" alt="프로필 이미지">
-                  <p class="member-id">아이디</p>
-                </div>
-                <div class="like">
-                  <img src="/powpowcommunity/images/likebutton.png" alt="좋아요">
-                </div>
+        <li>
+          <img class="post-image" src="/powpowcommunity/images/dog6.png" alt="강아지2">
+          <a href="#">
+            <div class="title-likes">
+              <div class="id">
+                <img src="/powpowcommunity/images/profileimage3.png" alt="프로필사진">
+                <p class="h5">아이디</p>
+              </div>
+              <a class="like-buttons">
+                <div class="like-button"><img src="/powpowcommunity/images/likebutton.png" alt="좋아요누르기 전"></div>
+                <div class="liked-button"><img src="/powpowcommunity/images/8666647_heart_icon 4_filled_yellow.png" alt="좋아요눌림"></div>
+              </a>
             </div>
-          </li>
+          </a>
+        </li>
 
-          <li>
-            <div class="others-community-image">
-              <img src="/powpowcommunity/images/fish2.png" alt="다른사람 게시물 물고기 이미지">
-                <div class="profile">
-                  <img src="/powpowcommunity/images/profileimage4.png" alt="프로필 이미지">
-                  <p class="member-id">아이디</p>
-                </div>
-                <div class="like">
-                  <img src="/powpowcommunity/images/likebutton.png" alt="좋아요">
-                </div>
+        <li>
+          <img class="post-image" src="/powpowcommunity/images/fish2.png" alt="물고기">
+          <a href="#">
+            <div class="title-likes">
+              <div class="id">
+                <img src="/powpowcommunity/images/profileimage4.png" alt="프로필사진">
+                <p class="h5">아이디</p>
+              </div>
+              <a class="like-buttons">
+                <div class="like-button"><img src="/powpowcommunity/images/likebutton.png" alt="좋아요누르기 전"></div>
+                <div class="liked-button"><img src="/powpowcommunity/images/8666647_heart_icon 4_filled_yellow.png" alt="좋아요눌림"></div>
+              </a>
             </div>
-          </li>
+          </a>
+        </li>
 
-          <li>
-            <div class="others-community-image">
-              <img src="/powpowcommunity/images/bird2.png" alt="다른사람 게시물 새 이미지">
-                <div class="profile">
-                  <img src="/powpowcommunity/images/profileimage3.png" alt="프로필 이미지">
-                  <p class="member-id">아이디</p>
-                </div>
-                <div class="like">
-                  <img src="/powpowcommunity/images/likebutton.png" alt="좋아요">
-                </div>
+        <li>
+          <img class="post-image" src="/powpowcommunity/images/bird2.png" alt="새">
+          <a href="#">
+            <div class="title-likes">
+              <div class="id">
+                <img src="/powpowcommunity/images/profileimage5.png" alt="프로필사진">
+                <p class="h5">아이디</p>
+              </div>
+              <a class="like-buttons">
+                <div class="like-button"><img src="/powpowcommunity/images/likebutton.png" alt="좋아요누르기 전"></div>
+                <div class="liked-button"><img src="/powpowcommunity/images/8666647_heart_icon 4_filled_yellow.png" alt="좋아요눌림"></div>
+              </a>
             </div>
-          </li>
+          </a>
+        </li>
             
           <div class="other-post-button">
             <button>
@@ -229,43 +274,43 @@
         <p class="recommend-post-title">강아지와 함께한 놀이 모아봤어요🪀️</p>
         <ul>
           <li>
-            <div class="recommend-post-image">
+            <a href="#" class="recommend-post-image">
               <img src="/powpowcommunity/images/Rectangle 236.png" alt="추천 강아지 게시물 이미지">
               <div class="profile">
                 <img src="/powpowcommunity/images/profileimage.png" alt="프로필 이미지">
                 <p class="member-id">아이디</p>
               </div>
-            </div>
+            </a>
           </li>
 
           <li>
-            <div class="recommend-post-image">
+            <a href="#" class="recommend-post-image">
               <img src="/powpowcommunity/images/communitydog.png" alt="추천 강아지 게시물 이미지">
               <div class="profile">
                 <img src="/powpowcommunity/images/profileimage2.png" alt="프로필2 이미지">
                 <p class="member-id">아이디</p>
               </div>
-            </div>
+            </a>
           </li>
 
           <li>
-            <div class="recommend-post-image">
+            <a href="#" class="recommend-post-image">
               <img src="/powpowcommunity/images/communitybird.png" alt="추천 새 게시물 이미지">
               <div class="profile">
                 <img src="/powpowcommunity/images/profileimage3.png" alt="프로필3 이미지">
                 <p class="member-id">아이디</p>
               </div>
-            </div>
+            </a>
           </li>
 
           <li>
-            <div class="recommend-post-image">
+            <a href="#" class="recommend-post-image">
               <img src="/powpowcommunity/images/communityfish.png" alt="추천 물고기 게시물 이미지">
               <div class="profile">
                 <img src="/powpowcommunity/images/profileimage4.png" alt="프로필3 이미지">
                 <p class="member-id">아이디</p>
               </div>
-            </div>
+            </a>
           </li>
 
         </ul>
@@ -280,4 +325,64 @@
    
   </div>
 </body>
+<script>
+  //누르기 취소하는 법, 전체 적용!
+  const likeButton = document.querySelector(".like-button");
+  const likedButton = document.querySelector(".liked-button");
+
+  likeButton.addEventListener("click", () => {
+    if(likedButton.style.display === "none") {
+       likedButton.style.display = "flex";
+       likeButton.style.visibility = "hidden";
+        }else {
+          likedButton.style.display = "none";
+        }
+  })
+
+  const mainMenus = document.querySelectorAll(".menu-wrap .menu");
+const subMenuUl = document.querySelectorAll(".sub-menu-wrap ul");
+const subMenuAll = document.querySelector(".sub-menu-wrap");
+const subMenus = document.querySelectorAll(".sub-menu-wrap .sub-menu");
+
+let count = 0;
+let hoverTimeout; // 타임아웃을 저장할 변수
+
+mainMenus.forEach((menu) => {
+  menu.addEventListener("mouseover", () => {
+    clearTimeout(hoverTimeout); // 기존에 설정된 타임아웃이 있으면 제거
+    subMenuUl.forEach((ul) => {
+      ul.style.height = "250px";
+      ul.style.backgroundColor = "white";
+    });
+  });
+
+  menu.addEventListener("mouseleave", () => {
+    hoverTimeout = setTimeout(() => {
+      subMenuUl.forEach((ul) => {
+        ul.style.height = "0";
+        ul.style.backgroundColor = "none";
+      });
+    }, 100); // 100ms 지연 후 메뉴를 닫음
+  });
+});
+
+subMenus.forEach((sub, i) => {
+  sub.addEventListener("mouseover", () => {
+    clearTimeout(hoverTimeout); // 서브메뉴에서도 마우스 오버 시 타임아웃 제거
+    subMenuUl.forEach((ul) => {
+      ul.style.height = "250px";
+    });
+  });
+
+  sub.addEventListener("mouseleave", () => {
+    hoverTimeout = setTimeout(() => {
+      subMenuUl.forEach((ul) => {
+        ul.style.height = "0";
+      });
+    }, 100); // 100ms 지연 후 서브메뉴를 닫음
+  });
+});
+
+
+</script>
 </html>

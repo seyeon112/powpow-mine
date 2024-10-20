@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/powpowcommunity/header.css">
   <link rel="stylesheet" href="/powpowcommunity/css/othersPost.css">
   <link rel="stylesheet" href="/powpowcommunity/index.css">
   <title>othersPost</title>
@@ -10,11 +11,63 @@
 
 <body>
   <div class="othersPost-wrapper">
-    <div class="othersPost-header">
-      <div class="header"></div>
+    <div class="header-container">
+      <div id="header-wrap">
+        <div id="border">
+                <div id="nav">
+                  <div class="left">
+                      <img src="/powpowcommunity/images/logo.png" alt="로고">
+                  </div>
+                  <div class="right">
+                    <div class="icons">
+                      <a href="#"><img src="/powpowcommunity/images/search_icon 2.jpg" alt="검색"></a>
+                      <a href="#"><img src="/powpowcommunity/images/truck_transport_icon 2.jpg" alt="배송"></a>
+                      <a href="#"><img src="/powpowcommunity/images/shopping_cart_icon 2.jpg" alt="카트"></a>
+                    </div>
+                    <div class="sector"></div>           
+                      <div class="login"><a href="#">로그인</a></div>
+                  </div>
+                </div>
+                <div class="menu-container">
+                  <ul class="menu-wrap h4">
+                    <li class="menu"><a href="#">스토어</a></li>
+                    <li class="menu"><a href="#">커뮤니티</a></li>
+                    <li class="menu"><a href="#">마이홈</a></li>
+                    <li class="menu"><a href="#">이벤트</a></li>
+                  </ul>
+                  <div id="sector"></div>
+                  <div class="sub-menu-wrap">
+                    <ul>
+                      <li class="sub-menu"><a href="#">강아지</a></li>
+                      <li class="sub-menu"><a href="#">고양이</a></li>
+                      <li class="sub-menu"><a href="#">새</a></li>
+                      <li class="sub-menu"><a href="#">물고기</a></li>
+                      <li class="sub-menu"><a href="#">헬스+</a></li>
+                    </ul>
+                    <ul>
+                      <li class="sub-menu"><a href="#">홈</a></li>
+                      <li class="sub-menu"><a href="#">헬스+</a></li>
+                    </ul>
+                    <ul>
+                      <li class="sub-menu"><a href="#">나의 정보</a></li>
+                      <li class="sub-menu"><a href="#">반려동물 정보</a></li>
+                      <li class="sub-menu"><a href="#">나의 쇼핑</a></li>
+                      <li class="sub-menu"><a href="#">내 게시글</a></li>
+                    </ul>
+  
+                    <ul>
+                      <li class="sub-menu"><a href="#"></a></li>
+                      <li class="sub-menu"><a href="#"></a></li>
+                      <li class="sub-menu"><a href="#"></a></li>
+                      <li class="sub-menu"><a href="#"></a></li>
+                    </ul>
+  
+                  </div>
+                </div>
+        </div>
+      </div>
     </div>
-
-    <div class="othersPost-header-section"></div>
+    
 
     <div class="othersPost-post-area">
       <div class="othersPost-post">
@@ -23,11 +76,8 @@
             <!-- 이미지까지의 래퍼 -->
             <div class="othersPost-profile-wrapper">
               <div class="othersPost-profile">
-                <img src="/powpowcommunity/images/profileimage.png" alt="프로필 이미지">
-                <p class="member-id">아이디</p>
-              </div>
-              <div class="follow-button">
-                <button class="follow-button">팔로잉</button>
+                <img src="/powpowcommunity/images/smallprofileimage.png" alt="프로필 이미지">
+                <p class="member-id">내 아이디</p>
               </div>
             </div>
             <div class="othersPost-image-wrapper">
@@ -49,9 +99,15 @@
                 <img src="/powpowcommunity/images/8666647_heart_icon 6.png" alt="좋아요버튼">
                 <p class="like-number">5</p>
               </div>
-              <button class="post-modify-button">
-                <img src="/powpowcommunity/images/entypo_dots-three-horizontal.png" alt="수정하기">
-              </button>
+              <div class="post-modify-buttons">
+                <button class="post-modify-button">
+                  <img src="/powpowcommunity/images/entypo_dots-three-horizontal.png" alt="수정하기">
+                  <div class="post-modify-box">
+                    <a href="#" class="h7" id="delete-my-post">삭제하기</a>
+                    <a href="#" class="h7" id="modify-my-post">수정하기</a>
+                  </div>
+                </button>
+              </div>
             </div>
               <div class="post-content-detail">
                 <p>게시물에 적은 본문 내용이 여기에 적힙니다.</p>
@@ -75,8 +131,8 @@
             <img src="/powpowcommunity/images/smallprofileimage.png" alt="댓글 작성칸 작은 프로필이미지">
             <div class="post-comment-writer-wrapper">
               <div class="post-comment-writer">
-                <p>댓글을 작성해 주세요</p>
-                <button class="post-comment-upload">완료</button>
+                <p>댓글을 작성 해주세요</p>
+                <button class= "h7" id="post-comment-upload">완료</button>
               </div>
             </div>
           </div>
@@ -93,8 +149,11 @@
                       <p class="comment-content">이거는 내가쓴 댓글이에요.</p>
                     </div>
                   </div>
-                  <button class="post-modify-button">
-                    <img src="/powpowcommunity/images/entypo_dots-three-horizontal.png" alt="수정하기">
+                  <button class="comment-modify-button">
+                    <img src="/powpowcommunity/images/entypo_dots-three-horizontal.png" alt="삭제하기">
+                    <div class="modify-box">
+                      <a href="#" class="h7" id="delete-post">삭제하기</a>
+                    </div>
                   </button>
                 </div>
               </li>
@@ -108,8 +167,11 @@
                       <p class="comment-content">고양이가 귀여워요</p>
                     </div>
                   </div>
-                  <button class="post-modify-button">
-                    <img src="/powpowcommunity/images/entypo_dots-three-horizontal.png" alt="수정하기">
+                  <button class="comment-modify-button">
+                    <img src="/powpowcommunity/images/entypo_dots-three-horizontal.png" alt="삭제하기">
+                    <div class="modify-box">
+                      <a href="#" class="h7" id="delete-post">삭제하기</a>
+                    </div>
                   </button>
                 </div>
               </li>
@@ -123,8 +185,11 @@
                       <p class="comment-content">캣타워인가요?</p>
                     </div>
                   </div>
-                  <button class="post-modify-button">
-                    <img src="/powpowcommunity/images/entypo_dots-three-horizontal.png" alt="수정하기">
+                  <button class="comment-modify-button">
+                    <img src="/powpowcommunity/images/entypo_dots-three-horizontal.png" alt="삭제하기">
+                    <div class="modify-box">
+                      <a href="#" class="h7" id="delete-post">삭제하기</a>
+                    </div>
                   </button>
                 </div>
               </li>
@@ -138,8 +203,11 @@
                       <p class="comment-content">얼굴이 너무귀엽네요</p>
                     </div>
                   </div>
-                  <button class="post-modify-button">
-                    <img src="/powpowcommunity/images/entypo_dots-three-horizontal.png" alt="수정하기">
+                  <button class="comment-modify-button">
+                    <img src="/powpowcommunity/images/entypo_dots-three-horizontal.png" alt="삭제하기">
+                    <div class="modify-box">
+                      <a href="#" class="h7" id="delete-post">삭제하기</a>
+                    </div>
                   </button>
                 </div>
               </li>
@@ -153,8 +221,11 @@
                       <p class="comment-content">얼굴이 너무귀엽네요</p>
                     </div>
                   </div>
-                  <button class="post-modify-button">
-                    <img src="/powpowcommunity/images/entypo_dots-three-horizontal.png" alt="수정하기">
+                  <button class="comment-modify-button">
+                    <img src="/powpowcommunity/images/entypo_dots-three-horizontal.png" alt="삭제하기">
+                    <div class="modify-box">
+                      <a href="#" class="h7" id="delete-post">삭제하기</a>
+                    </div>
                   </button>
                 </div>
               </li>
@@ -168,8 +239,11 @@
                       <p class="comment-content">캣타워인가요?</p>
                     </div>
                   </div>
-                  <button class="post-modify-button">
-                    <img src="/powpowcommunity/images/entypo_dots-three-horizontal.png" alt="수정하기">
+                  <button class="comment-modify-button">
+                    <img src="/powpowcommunity/images/entypo_dots-three-horizontal.png" alt="삭제하기">
+                    <div class="modify-box">
+                      <a href="#" class="h7" id="delete-post">삭제하기</a>
+                    </div>
                   </button>
                 </div>
               </li>
@@ -183,8 +257,11 @@
                       <p class="comment-content">얼굴이 너무 귀엽네요.</p>
                     </div>
                   </div>
-                  <button class="post-modify-button">
-                    <img src="/powpowcommunity/images/entypo_dots-three-horizontal.png" alt="수정하기">
+                  <button class="comment-modify-button">
+                    <img src="/powpowcommunity/images/entypo_dots-three-horizontal.png" alt="삭제하기">
+                    <div class="modify-box">
+                      <a href="#" class="h7" id="delete-post">삭제하기</a>
+                    </div>
                   </button>
                 </div>
               </li>
@@ -205,27 +282,27 @@
       <div class="user-likes-best-image">
         <ul>
           <li>
-            <img src="/powpowcommunity/images/userlike1.png" alt="공감베스트사진 1">
+            <a href="#"><img src="/powpowcommunity/images/userlike1.png" alt="공감베스트사진 1"></a>
           </li>
 
           <li>
-            <img src="/powpowcommunity/images/userlike2.png" alt="공감베스트사진 2">
+            <a href="#"><img src="/powpowcommunity/images/userlike2.png" alt="공감베스트사진 2"></a>
           </li>
 
           <li>
-            <img src="/powpowcommunity/images/userlike3.png" alt="공감베스트사진 3">
+            <a href="#"><img src="/powpowcommunity/images/userlike3.png" alt="공감베스트사진 3"></a>
           </li>
 
           <li>
-            <img src="/powpowcommunity/images/userlike4.png" alt="공감베스트사진 4">
+            <a href="#"><img src="/powpowcommunity/images/userlike4.png" alt="공감베스트사진 4"></a>
           </li>
 
           <li>
-            <img src="/powpowcommunity/images/userlike5.png" alt="공감베스트사진 5">
+            <a href="#"><img src="/powpowcommunity/images/userlike5.png" alt="공감베스트사진 5"></a>
           </li>
 
           <li>
-            <img src="/powpowcommunity/images/userlike6.png" alt="공감베스트사진 6">
+            <a href="#"><img src="/powpowcommunity/images/userlike6.png" alt="공감베스트사진 6"></a>
           </li>
         </ul>
       </div>
@@ -240,4 +317,83 @@
 
 
 </body>
+<script>
+
+const mainMenus = document.querySelectorAll(".menu-wrap .menu");
+  const subMenuUl = document.querySelectorAll(".sub-menu-wrap ul");
+  const subMenuAll = document.querySelector(".sub-menu-wrap");
+  const subMenus = document.querySelectorAll(".sub-menu-wrap .sub-menu");
+  
+  let count = 0;
+  let hoverTimeout; // 타임아웃을 저장할 변수
+  
+  mainMenus.forEach((menu) => {
+    menu.addEventListener("mouseover", () => {
+      clearTimeout(hoverTimeout); // 기존에 설정된 타임아웃이 있으면 제거
+      subMenuUl.forEach((ul) => {
+        ul.style.height = "250px";
+        ul.style.backgroundColor = "white";
+      });
+    });
+  
+    menu.addEventListener("mouseleave", () => {
+      hoverTimeout = setTimeout(() => {
+        subMenuUl.forEach((ul) => {
+          ul.style.height = "0";
+          ul.style.backgroundColor = "none";
+        });
+      }, 100); // 100ms 지연 후 메뉴를 닫음
+    });
+  });
+  
+  subMenus.forEach((sub, i) => {
+    sub.addEventListener("mouseover", () => {
+      clearTimeout(hoverTimeout); // 서브메뉴에서도 마우스 오버 시 타임아웃 제거
+      subMenuUl.forEach((ul) => {
+        ul.style.height = "250px";
+      });
+    });
+  
+    sub.addEventListener("mouseleave", () => {
+      hoverTimeout = setTimeout(() => {
+        subMenuUl.forEach((ul) => {
+          ul.style.height = "0";
+        });
+      }, 100); // 100ms 지연 후 서브메뉴를 닫음
+    });
+  });
+
+
+   const commentButton = document.querySelector(".comment-modify-button");
+    const modifySelector = document.querySelector(".modify-box");
+
+    commentButton.addEventListener("click", () => {
+      if(modifySelector.style.display === "" || modifySelector.style.display === "none") {
+        modifySelector.style.display = "flex";
+      }else {
+       modifySelector.style.display = "none";
+      }
+  })
+
+  const deleteComment = document.querySelector(".comment-wrapper");
+  const deleteButton = document.querySelector("#delete-post");
+
+  deleteButton.addEventListener("click", () => {
+    deleteComment.remove();
+  })
+
+  const postButton = document.querySelector(".post-modify-button");
+  const postModifySelector = document.querySelector(".post-modify-box");
+
+  postButton.addEventListener("click", () => {
+    if(postModifySelector.style.display === "" || postModifySelector.style.display === "none") {
+      postModifySelector.style.display = "flex";
+    }else {
+      postModifySelector.style.display = "none";
+    }
+  })
+
+  //댓글 기능 구현
+
+</script>
 </html>

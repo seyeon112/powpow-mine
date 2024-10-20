@@ -16,13 +16,13 @@
         <div id="border">
                 <div id="nav">
                   <div class="left">
-                      <img src="./images/main-logo.png" alt="로고">
+                      <img src="/powpowcommunity/images/main-logo.png" alt="로고">
                   </div>
                   <div class="right">
                     <div class="icons">
-                      <a href="#"><img src="./images/search_icon 2.jpg" alt="검색"></a>
-                      <a href="#"><img src="./images/truck_transport_icon 2.jpg" alt="배송"></a>
-                      <a href="#"><img src="./images/shopping_cart_icon 2.jpg" alt="카트"></a>
+                      <a href="#"><img src="/powpowcommunity/images/search_icon 2.jpg" alt="검색"></a>
+                      <a href="#"><img src="/powpowcommunity/images/truck_transport_icon 2.jpg" alt="배송"></a>
+                      <a href="#"><img src="/powpowcommunity/images/shopping_cart_icon 2.jpg" alt="카트"></a>
                     </div>
                     <div class="sector"></div>           
                       <div class="login"><a href="#">로그인</a></div>
@@ -123,7 +123,7 @@
           <div class="addpic-smallthumbnail"></div>
           <div class="addpic-plus-button">
             <img id="plus-img" src="/powpowcommunity/images/plus.png" alt="추가버튼">
-            <input type="file" name="file1" id="file1"></input>
+            <input type="file" name="file1" id="file1" class="real-upload"></input>
           </div>
           
         </div>
@@ -139,7 +139,7 @@
                   PC에서 사진 추가
                 </div>
               </label>
-            <input type="file" name="file" id="file"></input>
+            <input type="file" name="file" id="file" accept="image/*"></input>
           </div>
         </div>
         
@@ -162,4 +162,40 @@
   </div>
 
 </body>
+<script>
+
+  // //사진 로컬 pc에서 불러오는 이벤트
+  // //선언
+  // const fileInput = document.getElementById("file");
+
+  // //값이 변경될때 호출 되는 이벤트 리스너
+  // //이벤트 핸들러 함수 - 클릭한 요소를 값으로 가져옴
+  // fileInput.addEventListener('change',function(e){
+  //   console.log(e.target.files)
+  // })
+
+  // //배열 방에 담기 - 선택된 파일
+  // const file = e.target.files[0];
+  // const reader = new FileReader();
+  // //파일을 읽는 메서드
+  // reader.readAsDataURL(file);
+
+  // reader.onload = function(){
+  //   const photoFrame = document.createElement("div");
+  //   photoFrame.style = `background : url(${reader.result}); background-size : cover`;
+  //   photoFrame.className = "photoFrame";
+  //   document.getElementById("pictures").appendChild(photoFrame);
+
+  //   e.target.value = "";
+    
+  //   photoFrame.addEventListener("click",function(){
+  //       document.getElementById("pictures").removeChild(photoFrame);
+  //   })
+  // }
+
+  
+
+
+
+</script>
 </html>

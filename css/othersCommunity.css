@@ -270,15 +270,46 @@ width: 22px;
   margin-bottom: 29px;
 }
 
-.myProfile-button button{
+.myProfile-button {
+  width: 115px;
+  height: 43px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.follow-button {
+  width: 115px;
+  height: 43px;
   background-color: #FFFFFF;
-  color: #131313;
   border-radius: 25px;
+  box-sizing: border-box;
   border: solid 1px #131313;
   font-size: 16px;
   letter-spacing: -4%;
   padding: 11px 34px 11px 34px;
   font-weight: bold;
+  position: relative;
+  z-index: 100;
+}
+
+.following-button {
+  width: 115px;
+  height: 43px;
+  background-color: #113F8A;
+  color: #FFFFFF;
+  border-radius: 25px;
+  border: 0;
+  font-size: 16px;
+  letter-spacing: -4%;
+  padding: 11px 34px 11px 34px;
+  font-weight: bold;
+  position: absolute;
+  display: none;
+}
+
+.following-button a{
+  color: #FFFFFF;
 }
 
 .myprofile-card-information {
@@ -318,7 +349,7 @@ width: 22px;
 }
 
 .modify-selector-wrap {
-  /* visibility: hidden; */
+  display: none;
 }
 
 
@@ -399,3 +430,6 @@ width: 22px;
   margin-left: 59px;
 }
 
+.powpow-info {
+  margin-top: 84px;
+}

@@ -27,143 +27,7 @@ body {
   font-family: 'SpoqaHanSansNeo-Regular';
 }
 
-/* 헤더 부분 */
 
-.header-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  width: 1920px;
-}
-
-
-#header-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 1440px;
-  margin: 0 auto;
-}
-
-#header-wrap #border{
-  border-bottom: solid 1px #E5E5E5;
-}
-
-#header-wrap #nav { 
-  width: 1440px;
-  margin: 0 auto;
-  display: flex;
-  height: 62px; 
-  justify-content: space-between;
-  align-items: center;
-}
-#header-wrap #nav .sector {
-  line-height: 55px;
-  color: black;
-  margin-left: 10px;
-}
-#header-wrap #nav .right {
-  display: flex; 
-  padding : 0 0 0 24px;
-  gap: 9px;
-}
-#header-wrap #nav .left {
-  width: 181px;
-  height: 61px;
-  /* border: 1px solid black; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#header-wrap #nav .left img{ 
-  width: 130px;
-  height: 37px;
-  margin-left: 26px;
-  margin: auto auto;
-}
-#header-wrap #nav .icons img{ 
-  width: 30px;
-  height: 30px;
-  padding: 15px;
- }
-#header-wrap #nav .login { 
-  display: flex;
-  width: 92px;
-  height: 61px;
-  font-size: 16px;
-  border-left: 1px solid black;
-}
-#header-wrap #nav .login a {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  text-decoration-line:none;
-  color: black;
-}
-
-#header-wrap {
-width: 100%;
-}
-
-#header-wrap .logo-wrap {
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 0 0 20px 0;
-}
-
-#header-wrap .logo-wrap img {
-width: 180px;
-padding: 30px 0 20px 0;
-}
-
-#header-wrap .logo-wrap p {
-font-size: 12px;
-color: #767676;
-text-align: center;
-}
-
-#header-wrap .category-wrap {
-  width: 1440px;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  padding: 19px 0 19px 0;
-  border-top: 1px solid #ACACA8;
-  border-bottom: 1px solid #ACACA8;
-  box-sizing: border-box;
-}
-#header-wrap .category-wrap .category {
-display: flex;
-align-items: center;
-margin-left: 26px;
-}
-#header-wrap .category-wrap .category ul {
-display: flex;
-flex-direction: row;
-}
-
-#header-wrap .category-wrap .category ul li {
-list-style: none;
-font-size: 16px;
-list-style: none;
-padding-right: 65px;
-}
-
-#header-wrap .category-wrap .category ul li:first-child{
-font-weight: 900;
-}
-
-#header-wrap .search img {
-padding: 0 12px;
-width: 22px;
-}
 
 .category-wrap .category li a:hover {
   color: #FFC303;
@@ -173,7 +37,8 @@ width: 22px;
 .myCommunity-wrapper{
   width: 1920px;
   height: 1158px;
-  border: solid 4px red;
+  /* border: solid 4px red; */
+  position: relative;
 }
 
 .myCommunity{
@@ -184,7 +49,7 @@ width: 22px;
   justify-content: center;
   margin: 0 auto;
   height: 977px;
-  border: solid 4px black;
+  /* border: solid 4px black; */
 }
 
 .first-section {
@@ -281,6 +146,8 @@ width: 22px;
   font-weight: bold;
 }
 
+
+
 .myprofile-card-information {
   width: 208px;
   height: 22px;
@@ -329,6 +196,7 @@ width: 22px;
   top: 20px;
   transform: translate(50px, 30%);
   z-index: 100;
+  display: none;
 }
 
 .modify-selector-box {
@@ -395,7 +263,12 @@ width: 22px;
   margin-left: 59px;
 }
 
+.following-popup .menu-following-wrapper {
+  /* display: none; */
+}
+
 .follower {
+  cursor: pointer;
 }
 
 .follower-popup {
@@ -405,6 +278,30 @@ width: 22px;
   flex-wrap: wrap;
   flex-direction: column;
   /* border: solid 4px black; */
+}
+
+
+.pop-up {
+  width: 400px;
+  height: 534px;
+  display: flex;
+  flex-wrap: wrap;
+  /* border: solid 4px red; */
+  position: absolute;
+  right: 40%;
+  top: 30%;
+
+  display: none;
+}
+
+.frame {
+  width: 1920px;
+  height: 1285px;
+  position: relative;
+}
+
+.following-popup {
+  position: relative;
 }
 
 .menu-following {
@@ -419,16 +316,14 @@ width: 22px;
   align-items: center;
 }
 
+
 .menu-following .h7 {
   font-weight: bold;
   color: #FFFFFF;
 } 
 
-.menu-following-wrapper {
-  width: 400px;
-}
 
-.my-following-list-wrapper {
+.my-following-list {
   width: 400px;
   height: 484px;
   background-color: #FFFFFF;
@@ -478,11 +373,13 @@ width: 22px;
   justify-content: space-evenly;
 }
 
+/* 팔로우, 팔로잉 버튼 */
 .my-follow {
   width: 208px;
   height: 22px;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -494,12 +391,13 @@ width: 22px;
   background-color: transparent;
 }
 
-.menu-follower {
-
-}
-
-.menu-follower-wrapper {
+/* 팔로워 팝업 */
+.follower-popup {
   width: 400px;
+  height: 584px;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
 }
 
 .menu-follower {
@@ -515,7 +413,14 @@ width: 22px;
   align-items: center;
 }
 
+
 .menu-follower .h7 {
   font-weight: bold;
   color: #FFFFFF;
 } 
+
+.last-section {
+  width: 100%;
+  height: 200px;
+  /* border: solid 4px red; */
+}

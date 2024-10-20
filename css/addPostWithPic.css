@@ -87,6 +87,15 @@ input,select{vertical-align:middle}
   letter-spacing: -3%;
   padding: 4px 15px 4px 15px;
   cursor: pointer;
+  margin: 405px 171px 29px;
+}
+
+.choose-tag-button a{
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -3%;
+  cursor: pointer;
 }
 
 .explain-wrapper {
@@ -121,10 +130,19 @@ input,select{vertical-align:middle}
   background-color: #FFE072;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
-  align-items: center;
-  right: 30px;
-  /* visibility: hidden; */
+  position: absolute;
+  top: 50%;
+  right: 30%;
+  display: none;
+}
+
+
+.photoFrame{
+  width: 500px;
+  height: 500px;
+}
+.photoFrame:hover{
+  cursor: pointer;
 }
 
 
@@ -194,15 +212,10 @@ button.addpic-pc {
   width: 150px;
   height: 322px;
   display: flex;
-  flex-wrap: wrap;
-
+  flex-wrap: wrap
 }
 
-.tag-popup-wrapper {
-  position: absolute;
-  right: 132px;
-  top: 207px;
-}
+
 
 /* 상품 누르면 검색창 나타남 */
 
@@ -256,7 +269,7 @@ button.no{
   left: 40%;
   top: 40px;
   z-index: 100;
-  /* visibility: hidden; */
+  display: none;
 }
 
 .addpic-pc-relative {
@@ -264,6 +277,7 @@ button.no{
   height: 464px;
   position: relative;
 }
+
 
 .plus-product {
   font-size: 12px;
@@ -292,6 +306,13 @@ button.no{
   border-radius: 20px;
   background-color: #D9D9D9;
 }
+.button-tag-popup {
+  width: 464px;
+  height: 464px;
+  position: absolute;
+}
+
+
 
 .product-button-wrapper button {
   border-radius: 20px;
@@ -382,6 +403,7 @@ button.no{
   position: absolute;
   left: 140px;
   top: 20px;
+  display: none;
 }
 
 .yellow-button button {

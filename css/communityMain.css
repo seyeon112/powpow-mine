@@ -51,119 +51,6 @@ ctrl + c + k
   /* border: solid 4px black; */
 }
 
-/* 커뮤니티 헤더 - 카테고리를 제외한 로고, 로그인까지 */
-
-#community-wrap #navigator{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 1440px;
-  margin: 0 auto;
-  height: 94px;
-}
-
-#community-wrap .left img{
-  display: flex;
-  width: 236px;
-  margin: 0 auto;
-  height: 60px;
-  justify-content: center;
-  align-items: center;
-}
-
-#community-wrap .right{
-  display: flex;
-  flex-direction: column;
-}
-
-li {
-  list-style: none;
-}
-
-.nav-wrap {
-  width: 267px;
-  height: 30px;
-  display: flex;
-  justify-content: flex-end;
-  margin: 0 auto;
-  padding: 0 31px 0 0;
-}
-
-
-
-.navigator {
-  /* border: solid 4px black; */
-  width: 1440px;
-}
-
-.nav > ul > li{
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  width: 267px;
-  height: 30px;
-}
-
-.nav > ul > li a:link{
-  font-family: 'SpoqaHanSansNeo-Regular';
-  color: #131313;
-  text-decoration: none;
-}
-
-.nav .sector {
-  color: #818181;
-  height: 26px;
-}
-
-.login {
-  font-size: 16px;
-  line-height: 24px;
-  word-spacing: -3%;
-}
-
-/* 헤더 메뉴 카테고리 */
-
-.header-menu {
-  display: inline-block;
-  display: flex;
-  justify-content: flex-start;
-  height: 57px;
-}
-
-.header-menu .menu-category {
-  display: flex;
-  justify-content: flex-start;
-  width: 512px;
-  height: 24px;
-  margin: 0 auto;
-  
-}
-
-.menu-category > ul {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 19px;
-  width: 512px;
-}
-
-.menu-category > ul > li {
-  display: flex;
-  display: inline-block;
-  font-size: 20px;
-  font-weight: bold;
-  color: #131313;
-  word-spacing: -3%;
-}
-
-.menu-category > ul > li:hover {
-  color: #FFC303;
-}
-
-#header-section {
-  width: 1440px;
-  display: flex;
-  height: 30px;
-}
 
 /* 메인 배너 영역 */
 
@@ -193,6 +80,7 @@ li {
   letter-spacing: -3%;
   /* border: solid 4px black; */
   color: #FFFFFF;
+  margin-bottom: 10px;
 }
 
 .community-banner-small-title {
@@ -207,11 +95,7 @@ li {
   /* border: solid 4px black; */
 }
 
-.profile-wrapper {
-  display: block;
-  align-items: flex-start;
-  /* border: solid 4px black; */
-}
+
 .profile {
   height: 40px;
   width: 89px;
@@ -282,8 +166,9 @@ li {
 }
 
 .community-main-post-image-wrapper {
+  width: 1440px;
+  height: 300px;
   margin: 19px 0 0 0;
-  overflow: hidden;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -301,6 +186,7 @@ li {
 .community-main-post-image ul{
   width: 1440px;
   height: 300px;
+  overflow:hidden;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -315,19 +201,35 @@ li {
 
 
 
+
 .community-main-post-new-image-wrapper{
   width: 300px;
   height: 300px;
-  border: 2px solid #131313 inset;
+  box-sizing: border-box;
+  border: 2px #131313 inset;
   border-style: dashed;
   background-color: #F8F9FA;
   border-radius: 10%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
 }
 
-.community-main-post-new-image {
+.main-post-new-image-box{
+  width: 128px;
+  height: 41px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.community-main-post-new-image-wrapper a{
+  font-weight: bold;
+}
+
+.main-post-new-image img{
   height: 20px;
   width: 20px;
 }
@@ -337,11 +239,15 @@ li {
   width: 300px;
 }
 
-.community-main-post-image button {
+.community-post-button {
+  width: 40px;
+  height: 40px;
   position: absolute;
   right: 0;
   top: 40%;
-  transform: translate(50px);
+  border: none;
+  transform: translate(10px);
+  background-color: transparent;
 }
 
 .community-main-others-post-wrapper{
@@ -365,6 +271,8 @@ li {
   color: #131313;
 }
 
+
+
 .main-others-post-new-image {
   width: 220px;
   height: 300px;
@@ -376,52 +284,93 @@ li {
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
-.main-others-post-new-image-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-}
 
 .others-post-image-wrapper {
   margin: 19px 0 0 0;
   height: 320px;
   width: 1440px;
-  position: relative;
-
 }
 
-.others-community-image {
+.others-post-image-wrapper ul {
+  width: 1449px;
+  height: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.new-image {
   width: 220px;
   height: 300px;
-  position: relative;
-
+  display: flex;
+  background-color: #F8F9FA;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border: 1px #131313 dashed;
 }
 
-.others-community-image .profile {
-  position: absolute;
-  left: 9px;
-  bottom: 12px;
-}
-
-.ohers-post-image {
-  width: 244px;
-}
-
-.others-community-image .like {
-  position: absolute;
-  right: 17px;
-  bottom: 17px;
-}
-
-.main-others-post-new-image-box .get-my-image {
-  font-size: 14px;
+.new-image button{
+  background-color: transparent;
   font-weight: bold;
-  line-height: 22px;
-  letter-spacing: -3%;
+}
+
+.others-post-image-wrapper .post-image {
+  width: 220px;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.title-likes {
+  width: 180px;
+  height: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+  left: 17px;
+  bottom: 15%;
+  cursor: pointer;
+}
+
+.id {
+  width: 94px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.id .h5{
+  color: #FFFFFF;
+}
+
+.like-button {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+.liked-button {
+  position: absolute;
+  top: 9px;
+  display: none;
+}
+
+.other-post-button {
+  position: absolute;
+  right: 0px;
+  top: 40%;
+  transform: translate(10px);
 }
 
 /* 이미지 영역 */
@@ -433,6 +382,7 @@ li {
   justify-content: space-between; 
   width: 1440px;
   height: 300px;
+  position: relative;
 }
 
 
@@ -467,11 +417,12 @@ li {
   height: 36px;
   /* border: solid 4px black; */
 }
-.other-post-button {
+.other-post-button button{
   position: absolute;
   right: 0;
   top: 40%;
-  transform: translate(15px);
+  transform: translate(0px);
+  background-color: transparent;
 
 }
 

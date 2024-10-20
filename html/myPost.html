@@ -4,35 +4,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/powpowcommunity/css/myPost.css">
+  <link rel="stylesheet" href="/powpowcommunity/header.css">
+  <link rel="stylesheet" href="/powpowcommunity/index.css">
   <title>myPost</title>
 </head>
 <body>
 
-  <div id="header-wrap">
-    <div id="border">
-            <div id="nav">
-              <div class="left">
-                  <img src="/powpowcommunity/images/logo.png" alt="로고">
-              </div>
-              <div class="right">
-                <div class="icons">
-                  <img src="/powpowcommunity/images/search_icon 2.jpg" alt="검색">
-                  <img src="/powpowcommunity/images/truck_transport_icon 2.jpg" alt="배송">
-                  <img src="/powpowcommunity/images/shopping_cart_icon 2.jpg" alt="카트">
+  <div class="header-container">
+    <div id="header-wrap">
+      <div id="border">
+              <div id="nav">
+                <div class="left">
+                    <img src="/powpowcommunity/images/logo.png" alt="로고">
                 </div>
-                <div class="login"><a href="#">로그인</a></div>
+                <div class="right">
+                  <div class="icons">
+                    <a href="#"><img src="/powpowcommunity/images/search_icon 2.jpg" alt="검색"></a>
+                    <a href="#"><img src="/powpowcommunity/images/truck_transport_icon 2.jpg" alt="배송"></a>
+                    <a href="#"><img src="/powpowcommunity/images/shopping_cart_icon 2.jpg" alt="카트"></a>
+                  </div>
+                  <div class="sector"></div>           
+                    <div class="login"><a href="#">로그인</a></div>
+                </div>
               </div>
-            </div>
-        <div class="category-wrap">
-            <div class="category">
-              <ul>
-                <li class="category-menu"><strong>스토어</strong></li>          
-                <li class="category-menu"><strong>커뮤니티</strong></li>
-                <li class="category-menu"><strong>마이펫</strong></li>              
-                <li class="category-menu"><strong>이벤트</strong></li>
-              </ul>
-             </div>
-        </div>
+              <div class="menu-container">
+                <ul class="menu-wrap h4">
+                  <li class="menu"><a href="#">스토어</a></li>
+                  <li class="menu"><a href="#">커뮤니티</a></li>
+                  <li class="menu"><a href="#">마이홈</a></li>
+                  <li class="menu"><a href="#">이벤트</a></li>
+                </ul>
+                <div id="sector"></div>
+                <div class="sub-menu-wrap">
+                  <ul>
+                    <li class="sub-menu"><a href="#">강아지</a></li>
+                    <li class="sub-menu"><a href="#">고양이</a></li>
+                    <li class="sub-menu"><a href="#">새</a></li>
+                    <li class="sub-menu"><a href="#">물고기</a></li>
+                    <li class="sub-menu"><a href="#">헬스+</a></li>
+                  </ul>
+                  <ul>
+                    <li class="sub-menu"><a href="#">홈</a></li>
+                    <li class="sub-menu"><a href="#">헬스+</a></li>
+                  </ul>
+                  <ul>
+                    <li class="sub-menu"><a href="#">나의 정보</a></li>
+                    <li class="sub-menu"><a href="#">반려동물 정보</a></li>
+                    <li class="sub-menu"><a href="#">나의 쇼핑</a></li>
+                    <li class="sub-menu"><a href="#">내 게시글</a></li>
+                  </ul>
+
+                  <ul>
+                    <li class="sub-menu"><a href="#"></a></li>
+                    <li class="sub-menu"><a href="#"></a></li>
+                    <li class="sub-menu"><a href="#"></a></li>
+                    <li class="sub-menu"><a href="#"></a></li>
+                  </ul>
+
+                </div>
+              </div>
+      </div>
     </div>
   </div>
 
@@ -50,23 +81,26 @@
             <!-- 이미지까지의 래퍼 -->
             <div class="othersPost-profile-wrapper">
               <div class="othersPost-profile">
-                <img src="/powpowcommunity/images/profileimage.png" alt="프로필 이미지">
+                <img src="/powpowcommunity/images/smallprofileimage.png" alt="프로필 이미지">
                 <p class="member-id">아이디</p>
               </div>
-              <div class="follow-button">
-                <button class="follow-button">팔로잉</button>
+              <div class="follow-buttons">
+                <button class="follow-button">팔로우</button>
+                <button class="following-button">팔로잉</button>
               </div>
             </div>
             <div class="othersPost-image-wrapper">
               <div class="othersPost-image">
                 <img src="/powpowcommunity/images/othersPostimage.png" alt="내 게시글 이미지">
               </div>
-              <button class="left">
-                <img src="/powpowcommunity/images/8666557_chevron_left_icon 3.png" alt="왼쪽 버튼">
-              </button>
-              <button class="right">
-                <img src="/powpowcommunity/images/chevron-right.png" alt="오른쪽 버튼">
-              </button>
+              <div class="buttons">
+                <button class="left">
+                  <img src="/powpowcommunity/images/8666557_chevron_left_icon 3.png" alt="왼쪽 버튼">
+                </button>
+                <button class="right">
+                  <img src="/powpowcommunity/images/chevron-right.png" alt="오른쪽 버튼">
+                </button>
+              </div>
             </div>
           </div>
           <!-- 게시글 내용 부분 -->
@@ -76,10 +110,17 @@
                 <img src="/powpowcommunity/images/8666647_heart_icon 6.png" alt="좋아요버튼">
                 <p class="like-number">5</p>
               </div>
-              <button class="post-modify-button">
-                <img src="/powpowcommunity/images/entypo_dots-three-horizontal.png" alt="수정하기">
-              </button>
+              <div class="post-modify-buttons">
+                <button class="post-modify-button">
+                  <img src="/powpowcommunity/images/entypo_dots-three-horizontal.png" alt="수정하기">
+                  <div class="modify-box">
+                    <a href="#" class="h7" id="delete-post">삭제하기</a>
+                    <a href="#" class="h7" id="modify-post">수정하기</a>
+                  </div>
+                </button>
+              </div>
             </div>
+              
               <div class="post-content-detail">
                 <p>게시물에 적은 본문 내용이 여기에 적힙니다.</p>
                 <p># 태그를 이용해서 연관 검색어에 걸리도록 작성가능합니다.</p>
@@ -103,7 +144,7 @@
             <div class="post-comment-writer-wrapper">
               <div class="post-comment-writer">
                 <p>댓글을 작성해 주세요</p>
-                <button class="post-comment-upload">완료</button>
+                <button class="post-comment-upload"><a href="#">완료</a></button>
               </div>
             </div>
           </div>
@@ -127,27 +168,27 @@
       <div class="user-likes-best-image">
         <ul>
           <li>
-            <img src="/powpowcommunity/images/userlike1.png" alt="공감베스트사진 1">
+            <a href="#"><img src="/powpowcommunity/images/userlike1.png" alt="공감베스트사진 1"></a>
           </li>
 
           <li>
-            <img src="/powpowcommunity/images/userlike2.png" alt="공감베스트사진 2">
+            <a href="#"><img src="/powpowcommunity/images/userlike2.png" alt="공감베스트사진 2"></a>
           </li>
 
           <li>
-            <img src="/powpowcommunity/images/userlike3.png" alt="공감베스트사진 3">
+            <a href="#"><img src="/powpowcommunity/images/userlike3.png" alt="공감베스트사진 3"></a>
           </li>
 
           <li>
-            <img src="/powpowcommunity/images/userlike4.png" alt="공감베스트사진 4">
+            <a href="#"><img src="/powpowcommunity/images/userlike4.png" alt="공감베스트사진 4"></a>
           </li>
 
           <li>
-            <img src="/powpowcommunity/images/userlike5.png" alt="공감베스트사진 5">
+            <a href="#"><img src="/powpowcommunity/images/userlike5.png" alt="공감베스트사진 5"></a>
           </li>
 
           <li>
-            <img src="/powpowcommunity/images/userlike6.png" alt="공감베스트사진 6">
+            <a href="#"><img src="/powpowcommunity/images/userlike6.png" alt="공감베스트사진 6"></a>
           </li>
         </ul>
       </div>
@@ -160,4 +201,79 @@
   </div>
   
 </body>
+<script>
+
+  //취소하는 로직 추가
+  //팔로우
+
+const followButton = document.querySelector(".follow-button");
+  const followingButton = document.querySelector(".following-button");
+
+  followButton.addEventListener("click", () => {
+    if(followingButton.style.display === "none") {
+      followingButton.style.display = "flex";
+      followButton.style.visibility = "hidden";
+        }else {
+          followingButton.style.display = "none";
+        }
+  })
+  //수정 버튼
+
+  const postButton = document.querySelector(".post-modify-button");
+  const modifySelector = document.querySelector(".modify-box");
+
+  postButton.addEventListener("click", () => {
+    if(modifySelector.style.display === "" || modifySelector.style.display === "none") {
+      modifySelector.style.display = "flex";
+    }else {
+      modifySelector.style.display = "none";
+    }
+  })
+
+  const mainMenus = document.querySelectorAll(".menu-wrap .menu");
+const subMenuUl = document.querySelectorAll(".sub-menu-wrap ul");
+const subMenuAll = document.querySelector(".sub-menu-wrap");
+const subMenus = document.querySelectorAll(".sub-menu-wrap .sub-menu");
+
+let count = 0;
+let hoverTimeout; // 타임아웃을 저장할 변수
+
+mainMenus.forEach((menu) => {
+  menu.addEventListener("mouseover", () => {
+    clearTimeout(hoverTimeout); // 기존에 설정된 타임아웃이 있으면 제거
+    subMenuUl.forEach((ul) => {
+      ul.style.height = "250px";
+      ul.style.backgroundColor = "white";
+    });
+  });
+
+  menu.addEventListener("mouseleave", () => {
+    hoverTimeout = setTimeout(() => {
+      subMenuUl.forEach((ul) => {
+        ul.style.height = "0";
+        ul.style.backgroundColor = "none";
+      });
+    }, 100); // 100ms 지연 후 메뉴를 닫음
+  });
+});
+
+subMenus.forEach((sub, i) => {
+  sub.addEventListener("mouseover", () => {
+    clearTimeout(hoverTimeout); // 서브메뉴에서도 마우스 오버 시 타임아웃 제거
+    subMenuUl.forEach((ul) => {
+      ul.style.height = "250px";
+    });
+  });
+
+  sub.addEventListener("mouseleave", () => {
+    hoverTimeout = setTimeout(() => {
+      subMenuUl.forEach((ul) => {
+        ul.style.height = "0";
+      });
+    }, 100); // 100ms 지연 후 서브메뉴를 닫음
+  });
+});
+
+
+</script>
 </html>

@@ -16,13 +16,13 @@
         <div id="border">
                 <div id="nav">
                   <div class="left">
-                      <img src="./images/main-logo.png" alt="로고">
+                      <img src="/powpowcommunity/images/main-logo.png" alt="로고">
                   </div>
                   <div class="right">
                     <div class="icons">
-                      <a href="#"><img src="./images/search_icon 2.jpg" alt="검색"></a>
-                      <a href="#"><img src="./images/truck_transport_icon 2.jpg" alt="배송"></a>
-                      <a href="#"><img src="./images/shopping_cart_icon 2.jpg" alt="카트"></a>
+                      <a href="#"><img src="/powpowcommunity/images/search_icon 2.jpg" alt="검색"></a>
+                      <a href="#"><img src="/powpowcommunity/images/truck_transport_icon 2.jpg" alt="배송"></a>
+                      <a href="#"><img src="/powpowcommunity/images/shopping_cart_icon 2.jpg" alt="카트"></a>
                     </div>
                     <div class="sector"></div>           
                       <div class="login"><a href="#">로그인</a></div>
@@ -136,20 +136,17 @@
             
             
                 <div class="button-tag-popup">
-                  <div class="button-chosen">
-                    <a href="#">
-                      <div class="choose-tag-button">
+                      <button class="choose-tag-button">
+                        <a href="#">
                          + 상품 태그 추가
-                       </div>
-                    </a>
-                  </div>
-                  <label for="file">
-                    <div class="tag-popup-wrapper">
+                        </a>
+                      </button>
+
+  
                       <div class="tag-popup">
                        <p class="h5">태그할 상품을 누르세요 </p>
                       </div>
-                    </div>
-                  </label>
+       
             
                   <div class="tag-popup-select">
                     <div class="tag-search-box">
@@ -215,4 +212,17 @@
   </div>
 
 </body>
+<script>
+  const tagButton = document.querySelector(".choose-tag-button");
+  const tagPopup = document.querySelector(".tag-popup");
+
+  tagButton.addEventListener("click", () => {
+        if(tagPopup.style.display === "" || tagPopup.style.display === "none") {
+          tagPopup.style.display = "flex";
+        }else {
+          tagPopup.style.display = "none";
+        }
+      })
+
+</script>
 </html>

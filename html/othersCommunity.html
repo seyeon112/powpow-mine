@@ -65,7 +65,8 @@
           </div>
           <div class="myProfile-line"></div>
           <div class="myProfile-button">
-            <button><a href="#">팔로우</button>
+            <button class= "follow-button"><a href="#">팔로우</a></button>
+            <button class= "following-button"><a href="#">팔로잉</a></button>
           </div>
           <div class="myprofile-card-information-wrapper">
             <div class="myprofile-card-information">
@@ -284,4 +285,50 @@
   </div>
 
 </body>
+<script>
+  // 팔로잉 -> 팔로우 버튼 이벤트
+  const followButton = document.querySelector(".follow-button");
+  const followingButton = document.querySelector(".following-button");
+
+  // followButton.onclick = function() {
+  //   followButton.style.display = "none";
+  //   followingButton.style.display = "flex";
+  // }
+
+  followButton.addEventListener("click", () => {
+    //클릭 시 - 고칠점 : 팔로잉 버튼을 취소했을때, 구현이 헷갈려요
+    if(followingButton.style.display === "none") {
+      followButton.style.display = "none";
+      followingButton.style.display = "flex";
+    }else {
+      followButton.style.display = "flex";
+      followingButton.style.display = "none";
+    }
+  })
+  
+  //수정하기 버튼 이벤트 - 고칠점 : 1번째 요소만 동작 ㅠㅠ
+  //누르면
+  const postButton = document.querySelector(".post-button");
+  const modifySelector = document.querySelector(".modify-selector-wrap");
+
+  postButton.addEventListener("click", () => {
+    if(modifySelector.style.display === "" || modifySelector.style.display === "none") {
+      modifySelector.style.display = "flex";
+    }else {
+      modifySelector.style.display = "none";
+    }
+  })
+
+  //수정 - 삭제하기 버튼 이벤트 - 고칠점 : 마지막 요소 거리 어떻게 당겨와요?
+  const deleteMyPost = document.querySelector(".my-post-1");
+  const deleteButton = document.querySelector(".first-button");
+
+  deleteButton.addEventListener("click", () => {
+    deleteMyPost.remove();
+  })
+
+  
+
+    
+</script>
 </html>
