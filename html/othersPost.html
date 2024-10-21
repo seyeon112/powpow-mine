@@ -96,7 +96,7 @@
           <div class="othersPost-post-detail-wrapper">
             <div class="othersPost-post-detail">
               <div class="others-like">
-                <img src="/powpowcommunity/images/8666647_heart_icon 6.png" alt="좋아요버튼">
+                <button><img src="/powpowcommunity/images/8666647_heart_icon 6.png" alt="좋아요버튼"></button>
                 <p class="like-number">5</p>
               </div>
               <div class="post-modify-buttons">
@@ -130,16 +130,16 @@
           <div class="post-comment-writing">
             <img src="/powpowcommunity/images/smallprofileimage.png" alt="댓글 작성칸 작은 프로필이미지">
             <div class="post-comment-writer-wrapper">
-              <div class="post-comment-writer">
-                <p>댓글을 작성 해주세요</p>
+              <form action="#" class="post-comment-writer" method="post">
+                <input type="text" name="comment-write" placeholder="댓글을 작성해 주세요">
                 <button class= "h7" id="post-comment-upload">완료</button>
-              </div>
+              </form>
             </div>
           </div>
         </div>
         <div class="comment-list-wrapper">
           <div class="comment-list">
-            <ul>
+            <ul class="comments">
               <li>
                 <div class="comment-wrapper">
                   <div class="comment">
@@ -319,11 +319,11 @@
 </body>
 <script>
 
-const mainMenus = document.querySelectorAll(".menu-wrap .menu");
+  const mainMenus = document.querySelectorAll(".menu-wrap .menu");
   const subMenuUl = document.querySelectorAll(".sub-menu-wrap ul");
   const subMenuAll = document.querySelector(".sub-menu-wrap");
   const subMenus = document.querySelectorAll(".sub-menu-wrap .sub-menu");
-  
+
   let count = 0;
   let hoverTimeout; // 타임아웃을 저장할 변수
   
@@ -363,24 +363,48 @@ const mainMenus = document.querySelectorAll(".menu-wrap .menu");
     });
   });
 
+  //댓글 삭제 박스 띄우기
 
-   const commentButton = document.querySelector(".comment-modify-button");
-    const modifySelector = document.querySelector(".modify-box");
+    const commentUl = document.querySelector(".comments ul")
+    const commentButtonList = document.querySelectorAll(".comments li");
+    const modifyButtons = document.querySelectorAll(".comment-modify-button");
+    const modifyBox = document.querySelectorAll(".modify-box")
 
-    commentButton.addEventListener("click", () => {
-      if(modifySelector.style.display === "" || modifySelector.style.display === "none") {
-        modifySelector.style.display = "flex";
-      }else {
-       modifySelector.style.display = "none";
-      }
+
+    modifyButtons.forEach((button, i) => {
+      button.addEventListener("click", (e) => {
+        modifyBox[i].style.display = "felx";
+
+        console.log(modifyBox[i].style.display)
+        console.log("현재 클릭한 list의 버튼", modifyBox[i])
+        console.log("현재 클릭한 버튼의 list", commentButtonList[i])
+        //요소 띄우기
+      })
+    })
+
+  //   commentButton.addEventListener("click", () => {
+  //     if(modifySelector.style.display === "" || modifySelector.style.display === "none") {
+  //       modifySelector.style.display = "flex";
+  //     }else {
+  //      modifySelector.style.display = "none";
+  //     }
+  // })
+
+
+  //댓글 삭제 기능 
+
+  const ul = document.querySelector(".comments");
+  const list = document.querySelectorAll(".comments li");
+  const buttons = document.querySelectorAll(".modify-box");
+
+  buttons.forEach((button, i) => {
+    button.addEventListener("click", (e) => {
+      console.log("현재 클릭한 버튼의 list", list[i])
+      ul.removeChild(list[i])
+    })
   })
 
-  const deleteComment = document.querySelector(".comment-wrapper");
-  const deleteButton = document.querySelector("#delete-post");
 
-  deleteButton.addEventListener("click", () => {
-    deleteComment.remove();
-  })
 
   const postButton = document.querySelector(".post-modify-button");
   const postModifySelector = document.querySelector(".post-modify-box");
@@ -394,6 +418,18 @@ const mainMenus = document.querySelectorAll(".menu-wrap .menu");
   })
 
   //댓글 기능 구현
+
+  const form = document.querySelector("#comment");
+  const comment = document.querySelector("#comment input");
+  const submitButton = document.querySelector("#comment button");
+
+  // submitButton.addEventListener("click", () => {
+  //   if(!comment.value){
+  //     return alert("댓글을 입력하세요");
+  //   }
+  //   form.submit();
+  // })
+
 
 </script>
 </html>

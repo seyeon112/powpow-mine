@@ -293,7 +293,24 @@ width: 22px;
   z-index: 100;
 }
 
-.following-button {
+
+
+.follow {
+  width: 115px;
+  height: 43px;
+  background-color: #FFFFFF;
+  border-radius: 25px;
+  box-sizing: border-box;
+  border: solid 1px #131313;
+  font-size: 16px;
+  letter-spacing: -4%;
+  padding: 11px 34px 11px 34px;
+  font-weight: bold;
+  z-index: 100;
+}
+
+
+.following {
   width: 115px;
   height: 43px;
   background-color: #113F8A;
@@ -304,8 +321,6 @@ width: 22px;
   letter-spacing: -4%;
   padding: 11px 34px 11px 34px;
   font-weight: bold;
-  position: absolute;
-  display: none;
 }
 
 .following-button a{
@@ -407,7 +422,8 @@ width: 22px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 20px;
+  justify-content: flex-start;
 }
 
 .my-post .h5{

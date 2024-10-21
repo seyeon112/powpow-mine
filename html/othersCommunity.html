@@ -65,8 +65,7 @@
           </div>
           <div class="myProfile-line"></div>
           <div class="myProfile-button">
-            <button class= "follow-button"><a href="#">팔로우</a></button>
-            <button class= "following-button"><a href="#">팔로잉</a></button>
+            <button class= "follow"><a href="#">팔로우</a></button>
           </div>
           <div class="myprofile-card-information-wrapper">
             <div class="myprofile-card-information">
@@ -287,8 +286,16 @@
 </body>
 <script>
   // 팔로잉 -> 팔로우 버튼 이벤트
-  const followButton = document.querySelector(".follow-button");
-  const followingButton = document.querySelector(".following-button");
+  const followButton = document.querySelector(".follow");
+  followButton.addEventListener("click", (e) => {
+    if(e.target.className === "follow") {
+      e.target.setAttribute("class", "following")
+      e.target.innerText = "팔로잉";
+    }else{
+      e.target.setAttribute("class", "follow")
+      e.target.innerText = "팔로우";
+    }
+  })
 
   // followButton.onclick = function() {
   //   followButton.style.display = "none";

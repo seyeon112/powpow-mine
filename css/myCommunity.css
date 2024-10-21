@@ -290,14 +290,18 @@ body {
   position: absolute;
   right: 40%;
   top: 30%;
-
-  display: none;
+  /* display: none; */
 }
 
 .frame {
-  width: 1920px;
-  height: 1285px;
-  position: relative;
+  width: 100dvw;
+  height: 100dvh;
+  position:fixed;
+  left: 0;
+  top: 0;
+  background-color: (0, 0, 0, 0.5);
+  z-index: 10;
+  display: none;
 }
 
 .following-popup {
