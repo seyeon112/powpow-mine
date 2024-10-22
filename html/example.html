@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>게시판 부분</title>
+  <style>
+    .comments {
+      list-style: none;
+    }
+
+    .comments li {
+      display: flex;
+      width: 558px;
+      height: 85px;
+      align-items: center;
+    }
+
+    .comments li div:nth-child(1) {
+      width: 60px;
+    }
+
+
+    .comments li div:nth-child(2) {
+      flex: 1;
+    }
+
+    .comments li .thumb{
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+
+    .comments li .user-id {
+      margin: 0; /*리셋*/
+      line-height: 1.3; /*리셋*/
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .comments li .comment {
+      margin: 0; /*리셋*/
+      line-height: 1.3; /*리셋*/
+      font-size: 14px;
+    }
+
+    
+    .comments .comment-icon-wrap{
+      position: relative;
+    }
+
+    .comments .comment-icon{
+      width: fit-content;
+    }
+
+    .comments .comment-button {
+      position: absolute;
+      flex-direction: column;
+      left : 30px;
+      top : 50%;
+      transform: translate(0, -50%);
+      border-radius: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .comments .comment-button button:first-child {
+      border-bottom: solid 1px #d9d9d9;
+    }
+
+    .comments .comment-button button {
+      background: none;
+      cursor: pointer;
+      border: none;
+      width: 100px;
+    }
+
+    .disable{
+      display: none;
+    }
+
+    .enable {
+      display: flex;
+    }
+    
+  </style>
+</head>
+<body>
+  <ul class="comments">
+    <li class="comments-list">
+      <div>
+        <img class="thumb" src="./images/new.jpg" alt="썸네일">
+      </div>
+      <div>
+          <p class="user-id">나는야 대마왕 류재은</p>
+          <span class="comment">너네 들은 강릉 못갔다왔지? 난 갔다!</span>
+      </div>
+      <div class="comment-icon-wrap">
+        <img class="comment-icon" src="./images/more.png" alt="더보기">
+        <div class="comment-button disable">
+          <button class="comment-delete-btn">삭제하기</button>
+          <button class="comment-cancel-btn">취소하기</button>
+        </div>
+      </div>
+    </li>
+    <li class="comments-list">
+      <div>
+        <img class="thumb" src="./images/new.jpg" alt="썸네일">
+      </div>
+      <div>
+          <p class="user-id">나는야 폭군 류재진</p>
+          <span class="comment">너네 들은 강릉 못갔다왔지? 난 갔다!</span>
+      </div>
+      <div class="comment-icon-wrap">
+        <img class="comment-icon" src="./images/more.png" alt="더보기">
+        <div class="comment-button disable">
+          <button class="comment-delete-btn">삭제하기</button>
+          <button class="comment-cancel-btn">취소하기</button>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+
+  <div id="click-event" 
+  style="width: 500px; height: 500px; background-color: aqua; position: relative;">
+    
+  </div>
+
+</body>
+<script>
+
+
+  const eventTest = document.getElementById("click-event");
+  eventTest.addEventListener("click", (e) => {
+    console.log(e)
+    console.log("x좌표", e.layerX)
+    console.log("y좌표", e.layerY)
+    const div = document.createElement("div");
+    div.style.width = "100px";
+    div.style.height = "100px";
+    div.style.background = "red";
+    div.style.position = "absolute";
+    div.style.left = `${e.layerX}px`;
+    div.style.top = `${e.layerY}px`;
+    eventTest.appendChild(div);
+  })
+
+  // 코멘트 활성화 로직
+  const comments = document.querySelector(".comments")
+  const commentsList = document.querySelectorAll(".comments-list")
+  const commentsIcons = document.querySelectorAll(".comment-icon");
+  const commentsCancelButton = document.querySelectorAll(".comment-cancel-btn");
+  const commentsDeleteButton = document.querySelectorAll(".comment-delete-btn");
+
+  console.log(commentsIcons)
+  commentsIcons.forEach((icon, i) => {
+    icon.addEventListener("click", () => {
+      if(icon.nextElementSibling.className.includes("disable")){
+        icon.nextElementSibling.className = "comment-button enable";
+      }else{
+        icon.nextElementSibling.className = "comment-button disable";
+      }
+    })
+
+    // 취소 버튼 로직
+    commentsCancelButton[i].addEventListener("click", () => {
+      icon.nextElementSibling.className = "comment-button disable";
+    })
+    // 삭제 버튼 로직
+    commentsDeleteButton[i].addEventListener("click", () => {
+      // console.log("삭제 로직 추가")
+      comments.removeChild(commentsList[i]);
+      icon.nextElementSibling.className = "comment-button disable";
+    })
+
+  })
+
+
+</script>
+</html>

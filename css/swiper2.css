@@ -1,0 +1,54 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+
+.swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.swiper-button {
+  background-color: transparent;
+}
+
+.post-info {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 0%;
+}

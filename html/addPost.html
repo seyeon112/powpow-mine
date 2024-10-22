@@ -67,8 +67,71 @@
         </div>
       </div>
     </div>
-    </body>
-    <script>
+
+    <div class="addpost">
+      <div class="picture-box-wrapper">
+        <div class="picture-box-list">
+          <ul>
+            <li class="picture-box-big">
+              <div class="box-info">
+                <p>버튼을 눌러 <br>사진을 추가해보세요<br>(최대 5장까지 가능)</p>
+                <label for="images">
+                  <div class="image"></div>
+                </label>
+                <label for="upload">
+                  <div class="h6">
+                    <div class="upload">PC에서 사진 추가하기</div>
+                  </div>
+                </label>
+                <input type="file" id="upload">
+              </div>
+            </li>
+            <li class="picture-box-small"></li>
+            <li class="picture-box-small"></li>
+            <li class="picture-box-small"></li>
+            <li class="picture-box-small"></li>
+          </ul>
+        </div>
+        <div class="upload-box-wrapper">
+          <div class="upload-box">
+            <form>
+              <label for="upload-post">
+                <div class="h6">
+                  <div class="upload-post-button">업로드</div>
+                </div>
+              </label>
+              <input type="submit" id="upload-post">
+              <textarea id="post" placeholder="오늘 당신의 반려동물은 무엇을 했나요?&#10;당신이 바라보는 모습을 수백만 포포인들과 나눠보세요!" onfocus="this.placeholder=''"></textarea>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+  
+  
+  
+  
+  
+  
+  </div> 
+
+    
+
+</body>
+          
+            
+        
+                
+                
+              
+          
+    
+        
+   
+<script>
+
+
   const mainMenus = document.querySelectorAll(".menu-wrap .menu");
   const subMenuUl = document.querySelectorAll(".sub-menu-wrap ul");
   const subMenuAll = document.querySelector(".sub-menu-wrap");
@@ -111,88 +174,38 @@
         });
       }, 100); // 100ms 지연 후 서브메뉴를 닫음
     });
-  });
-    </script>
+  }); 
 
-    <div class="addPost">
-
-      <div class="addpic-wrapper">
-        <div class="button-first"><a href="#">업로드</a></div>
-        <div class="section"></div>
-        <div class="addpic">
-          <div class="addpic-smallthumbnail"></div>
-          <div class="addpic-plus-button">
-            <img id="plus-img" src="/powpowcommunity/images/plus.png" alt="추가버튼">
-            <input type="file" name="file1" id="file1" class="real-upload"></input>
-          </div>
-          
-        </div>
-        <div class="addpic-pc-wrapper">
-          <div class="addpic-pc">
-            <div class="p">
-              <p class="h6">사진을 추가하세요</p>
-              <p class="h6">(최대 5장까지 가능)</p>
-            </div>
-            <div class="block"></div>
-              <label for="file">
-               <div class="choose-file-button">
-                  PC에서 사진 추가
-                </div>
-              </label>
-            <input type="file" name="file" id="file" accept="image/*"></input>
-          </div>
-        </div>
-        
-        <div class="explain-wrapper">
-          <form class="explain-box" action="" method="get">
-            <textarea id='explain' onfocus="this.placeholder = ''"placeholder="오늘 당신의 반려동물은 무엇을 했나요?&#13;&#10;당신이 바라보는 모습을 수백만 포포인들과 나눠보세요!" wrap="hard"></textarea>
+  //이미지 추가하기 
+  const input = document.querySelector("input");
+  const thumbnail = document.querySelector(".picture-area li img");
 
 
-          </form>
-        </div>
-        
-        
-      </div>
+  input.addEventListener("change", (e) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(e.target.files[0])
+    reader.onload = (e) => {
+      console.log(e)
+      thumbnail.style.backgroundImage = `url(${e.target.result})`;
+      thumbnail.style.backgroundColor = "none"; 
       
-      <div class="powpow-info">
-        <img src="/powpowcommunity/images/Group 241.png" alt="포포 정보">
-      </div>
+    }
+  })
 
-    </div>
-  </div>
+  //업로드 확인
+  const post = document.querySelector(".upload-post");
+  const uploadButton = document.querySelector("upload-post");
 
-</body>
-<script>
+  console.log(".upload-post")
 
-  // //사진 로컬 pc에서 불러오는 이벤트
-  // //선언
-  // const fileInput = document.getElementById("file");
 
-  // //값이 변경될때 호출 되는 이벤트 리스너
-  // //이벤트 핸들러 함수 - 클릭한 요소를 값으로 가져옴
-  // fileInput.addEventListener('change',function(e){
-  //   console.log(e.target.files)
-  // })
+   
 
-  // //배열 방에 담기 - 선택된 파일
-  // const file = e.target.files[0];
-  // const reader = new FileReader();
-  // //파일을 읽는 메서드
-  // reader.readAsDataURL(file);
+  // repeat, cover
 
-  // reader.onload = function(){
-  //   const photoFrame = document.createElement("div");
-  //   photoFrame.style = `background : url(${reader.result}); background-size : cover`;
-  //   photoFrame.className = "photoFrame";
-  //   document.getElementById("pictures").appendChild(photoFrame);
 
-  //   e.target.value = "";
-    
-  //   photoFrame.addEventListener("click",function(){
-  //       document.getElementById("pictures").removeChild(photoFrame);
-  //   })
-  // }
 
+ 
   
 
 

@@ -6,6 +6,11 @@
   <link rel="stylesheet" href="/powpowcommunity/index.css">
   <link rel="stylesheet" href="/powpowcommunity/header.css">
   <link rel="stylesheet" href="/powpowcommunity/css/healthComMain.css">
+  <link rel="stylesheet" href="/powpowcommunity/css/swiper.css">
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper/swiper-bundle.min.css"
+/>
   <title>Document</title>
 </head>
 <body>
@@ -69,51 +74,6 @@
         </div>
       </div>
      
-    <script>
-        const mainMenus = document.querySelectorAll(".menu-wrap .menu");
-        const subMenuUl = document.querySelectorAll(".sub-menu-wrap ul");
-        const subMenuAll = document.querySelector(".sub-menu-wrap");
-        const subMenus = document.querySelectorAll(".sub-menu-wrap .sub-menu");
-        
-        let count = 0;
-        let hoverTimeout; // 타임아웃을 저장할 변수
-        
-        mainMenus.forEach((menu) => {
-          menu.addEventListener("mouseover", () => {
-            clearTimeout(hoverTimeout); // 기존에 설정된 타임아웃이 있으면 제거
-            subMenuUl.forEach((ul) => {
-              ul.style.height = "250px";
-              ul.style.backgroundColor = "white";
-            });
-          });
-        
-          menu.addEventListener("mouseleave", () => {
-            hoverTimeout = setTimeout(() => {
-              subMenuUl.forEach((ul) => {
-                ul.style.height = "0";
-                ul.style.backgroundColor = "none";
-              });
-            }, 100); // 100ms 지연 후 메뉴를 닫음
-          });
-        });
-        
-        subMenus.forEach((sub, i) => {
-          sub.addEventListener("mouseover", () => {
-            clearTimeout(hoverTimeout); // 서브메뉴에서도 마우스 오버 시 타임아웃 제거
-            subMenuUl.forEach((ul) => {
-              ul.style.height = "250px";
-            });
-          });
-        
-          sub.addEventListener("mouseleave", () => {
-            hoverTimeout = setTimeout(() => {
-              subMenuUl.forEach((ul) => {
-                ul.style.height = "0";
-              });
-            }, 100); // 100ms 지연 후 서브메뉴를 닫음
-          });
-        });
-     </script>
 
 
       <div class="healthComMain">
@@ -133,98 +93,100 @@
               <!-- 전체 이미지를 감싸는 부모 -->
               <div class="recommend-category-post">
                
-                <ul>
-                  <li>
-                    <a href="#">
-                      <div class="recommend-post">
-                        <img src="/powpowcommunity/images/healthdog (2).png" alt="포스팅 1">
-                        <p class="recommend-post-title">
-                          강아지들마다<br>성격이 다르다는 사실,<br>알고 계셨나요?💡<br>
-                        </p>
-                        <a class="like-buttons">
-                          <div class="like-button"><img src="/powpowcommunity/images/likebutton.png" alt="좋아요누르기 전"></div>
-                          <div class="liked-button"><img src="/powpowcommunity/images/8666647_heart_icon 4_filled_yellow.png" alt="좋아요눌림"></div>
+                <div class="swiper-container mySwiper">
+                    <ul class="swiper-wrapper">
+                      <li class="swiper-slide">
+                        <a href="#"><img src="/powpowcommunity/images/healthdog (2).png" alt="포스팅 1">
+                          <div class="post-info">
+                            <p class="recommend-post-title">
+                              <span class="h5">강아지들마다<br>성격이 다르다는 사실,<br>알고 계셨나요?💡<br></span>
+                            </p>
+                              <button class="like-button" ><img src="/powpowcommunity/images/likebutton.png" id="like" alt="좋아요 버튼">
+                              </button>
+                          </div>
                         </a>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <div class="recommend-post">
-                        <img src="/powpowcommunity/images/healthbird.png" alt="포스팅 2">
-                        <p class="recommend-post-title">
-                          윙컷이란 뭘까요?💡<br>
-                        </p>
-                        <a class="like-buttons">
-                          <div class="like-button"><img src="/powpowcommunity/images/likebutton.png" alt="좋아요누르기 전"></div>
-                          <div class="liked-button"><img src="/powpowcommunity/images/8666647_heart_icon 4_filled_yellow.png" alt="좋아요눌림"></div>
+                      </li>
+                      <li class="swiper-slide">
+                        <a href="#"><img src="/powpowcommunity/images/healthbird.png" alt="포스팅 2">
+                          <div class="post-info">
+                            <p class="recommend-post-title">
+                              <span class="h5">윙컷이란 뭘까요?💡<br></span>
+                            </p>
+                              <button class="like-button"><img src="/powpowcommunity/images/likebutton.png" id="like" alt="좋아요 버튼">
+                              <button class="liked-button"><img src="/powpowcommunity/images/8666647_heart_icon 4_filled_yellow.png" id="liked" alt="좋아요 눌린 버튼">
+                              </button>
+                          </div>
                         </a>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <div class="recommend-post">
-                        <img src="/powpowcommunity/images/healthdog.png" alt="포스팅 3">
-                        <p class="recommend-post-title">
-                          강아지한테 이건<br>먹이면 <span class="h5">안돼요!💡</span>
-                        </p>
-                        <a class="like-buttons">
-                          <div class="like-button"><img src="/powpowcommunity/images/likebutton.png" alt="좋아요누르기 전"></div>
-                          <div class="liked-button"><img src="/powpowcommunity/images/8666647_heart_icon 4_filled_yellow.png" alt="좋아요눌림"></div>
+                      </li>
+                      <li class="swiper-slide">
+                        <a href="#"><img src="/powpowcommunity/images/healthdog.png" alt="포스팅 3">
+                        <div class="post-info">
+                          <p class="recommend-post-title">
+                            <span class="h5">강아지한테 이건<br>먹이면 <span class="h5">안돼요!💡</span>
+                          </p>
+                            <button class="like-button" ><img src="/powpowcommunity/images/likebutton.png" id="like" alt="좋아요 버튼">
+                            </button>
+                        </div>
+                      </a></li>
+                      <li class="swiper-slide">
+                        <a href="#"><img src="/powpowcommunity/images/healthdog2.png" alt="포스팅 4">
+                          <div class="post-info">
+                            <p class="recommend-post-title">
+                              <span class="h5">강아지들이 하는<br>제스쳐,<br><span class="h5">무슨 뜻일까요?💡</span>
+                            </p>
+                              <button class="like-button" ><img src="/powpowcommunity/images/likebutton.png" id="like" alt="좋아요 버튼">
+                              </button>
+                          </div>
                         </a>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <div class="recommend-post">
-                        <img src="/powpowcommunity/images/healthdog2.png" alt="포스팅 1">
-                        <p class="recommend-post-title">
-                          강아지들이 하는<br>제스쳐,<br><span class="h5">무슨 뜻일까요?💡</span>
-                        </p>
-                        <a class="like-buttons">
-                          <div class="like-button"><img src="/powpowcommunity/images/likebutton.png" alt="좋아요누르기 전"></div>
-                          <div class="liked-button"><img src="/powpowcommunity/images/8666647_heart_icon 4_filled_yellow.png" alt="좋아요눌림"></div>
+                      </li>
+                      <li class="swiper-slide">
+                        <a href="#"><img src="/powpowcommunity/images/healthcat.png" alt="포스팅 5">
+                          <div class="post-info">
+                            <p class="recommend-post-title">
+                              <span class="h5">우리 고양이는<br>왜 불안해 할까요?💡</span>
+                            </p>
+                              <button class="like-button" ><img src="/powpowcommunity/images/likebutton.png" id="like" alt="좋아요 버튼">
+                              </button>
+                          </div>
                         </a>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <div class="recommend-post">
-                        <img src="/powpowcommunity/images/healthcat.png" alt="포스팅 1">
-                        <p class="recommend-post-title">
-                          <span class="h5">우리 고양이는<br>왜 불안해 할까요?💡</span>
-                        </p>
-                        <a class="like-buttons">
-                          <div class="like-button"><img src="/powpowcommunity/images/likebutton.png" alt="좋아요누르기 전"></div>
-                          <div class="liked-button"><img src="/powpowcommunity/images/8666647_heart_icon 4_filled_yellow.png" alt="좋아요눌림"></div>
+                      </li>
+                      <li class="swiper-slide">
+                        <a href="#"><img src="/powpowcommunity/images/healthfish.png" alt="포스팅 6">
+                          <div class="post-info">
+                            <p class="recommend-post-title">
+                              <span class="h5">금붕어에게 가장<br>좋은 환경은?💡   </span>
+                            </p>
+                              <button class="like-button" ><img src="/powpowcommunity/images/likebutton.png" id="like" alt="좋아요 버튼">
+                              </button>
+                          </div>
                         </a>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <div class="recommend-post">
-                        <img src="/powpowcommunity/images/healthfish.png" alt="포스팅 1">
-                        <p class="recommend-post-title">
-                          금붕어에게 가장<br>좋은 환경은?💡
-                        </p>
-                        <a class="like-buttons">
-                          <div class="like-button"><img src="/powpowcommunity/images/likebutton.png" alt="좋아요누르기 전"></div>
-                          <div class="liked-button"><img src="/powpowcommunity/images/8666647_heart_icon 4_filled_yellow.png" alt="좋아요눌림"></div>
+                      </li>
+                      <li class="swiper-slide">
+                        <a href="#"><img src="/powpowcommunity/images/healthcat2.png" alt="포스팅 7">
+                          <div class="post-info">
+                            <p class="recommend-post-title">
+                              <span class="h5">고양이는<br>이런걸 좋아해요!💡   </span>
+                            </p>
+                              <button class="like-button"><img src="/powpowcommunity/images/likebutton.png" id="like" alt="좋아요 버튼">
+                              </button>
+                          </div>
                         </a>
-                      </div>
-                    </a>
-                  </li>
-      
-                </ul>
+                      </li>
+                    </ul>
+    
+                  <div class="swiper-button">
+                    <div class="swiper-button-next">
+                      <img src="/powpowcommunity/images/버튼.png" alt="오른쪽 버튼">
+                    </div>
+                    <div class="swiper-button-prev">
+                      <img src="/powpowcommunity/images/왼쪽 버튼.png" alt="왼쪽 버튼">
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
       
               </div>
-                <button class="right-button">
-                  <img src="/powpowcommunity/images/버튼.png" alt="옆으로 가기 버튼">
-                </button>
+  
             </div>
       <!-- 버튼 -->
       
@@ -232,39 +194,6 @@
         </div>
       </div>
 
-      <script>
-
-        // //옆으로 넘기는 버튼
-        // const slide = document.querySelector(".recomend-category-post-wrapper");
-        // const slideContents = document.querySelectorAll(".recomend-category-post");
-        
-        // const nextButton = document.querySelector(".right-button");
-        
-        // //counter
-        // let counter = 1;
-        // const size = slideContents[0].clientWidth;
-
-        // nextButton.addEventListener("click", () => {
-        //   is (counter >= slideContents.length - 1) return;
-        //   slideContents.style.transition = "transform 0.3s ease-in-out";
-        //   counter++;
-        //   slide.style.transform = "translate"
-        // })
-
-        //하트 버튼
-        const likeButton = document.querySelector(".like-button");
-        const likedButton = document.querySelector(".liked-button");
-
-        likeButton.addEventListener("click", () => {
-          if(likedButton.style.display === "none") {
-            likedButton.style.display = "flex";
-            likeButton.style.visibility = "hidden";
-              }else {
-                likedButton.style.display = "none";
-              }
-        })
-
-      </script>
       
       <div class="section1"></div>
       
@@ -392,32 +321,15 @@
           <p class="sports-title">반려동물 대회</p>
         </div>
         <!-- 전체 이미지를 감싸는 부모 -->
-        <div class="sports-event-wrapper">
-          <div class="sports-event">
-            <ul>
-              <li class="sports"><a href="#"><img src="/powpowcommunity/images/sportsevent.png" alt="대회 이미지 1"></a></li>
-              <li class="sports"><a href="#"><img src="/powpowcommunity/images/sportsevent2.png" alt="대회 이미지 2"></a></li>
-              <li class="sports"><a href="#"><img src="/powpowcommunity/images/sportsevent3.png" alt="대회 이미지 3"></a></li>
-              <li class="sports"><a href="#"><img src="/powpowcommunity/images/sportsevent4.png" alt="대회 이미지 4"></a></li>
-              <li clas s="sports"><a href="#"><img src="/powpowcommunity/images/sportsevent5.png" alt="대회 이미지 5"></a></li>
-              <li class="sports-last"><a href="#"><img src="/powpowcommunity/images/sportsevent6.png" alt="대회 이미지 6"></a></li> 
-            </ul>
-            <div class="right-button"><button><img src="/powpowcommunity/images/버튼.png" alt="button"></button></div>
-            </div>
-        </div>
+        
+
+
+
+
+
       </div>
 
-      <script>
-
-        //옆으로 일정 width만큼 이동하는 로직 필요
-        rightButton.addEventListener("click", () => {
-          let moveright = document.querySelector(".sports");
-          if()
-        })
-
-
-       
-      </script>
+      
 
 
       <div class="section-last"></div>
@@ -427,6 +339,140 @@
         </div><!-- 헬스 커뮤니티 래퍼 -->
     </div>
 
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 6,
+        spaceBetween: 20,
+        slidesPerGroup: 1,
+        // pagination: {
+        //   el: ".swiper-pagination",
+        //   clickable: true,
+        // },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+
+      const swipers = document.querySelector(".swiper-wrapper")
+      const swipersList = document.querySelectorAll(".swiper-slide")
+      const swipersLike = document.querySelectorAll(".like-button");
+
+      console.log(swipersLike)
+      
+      
+
+
+
+
+
+      
+      
+      //좋아요 버튼 바꾸는 로직
+      
+        const likedButton = document.querySelector(".like-button")
+        likedButton.addEventListener("click", (e) => {
+
+          if(e.target.className === "like-button"){
+            e.target.setAttribute("class", "liked-button")
+            e.target.style.backgroundImage = `url(/powpowcommunity/images/8666647_heart_icon 4_filled_yellow.png)`;
+          }else{
+            e.target.setAttribute("class", "like-button")
+            e.target.style.backgroundImage = `url(/powpowcommunity/images/likebutton.png)`;
+          }
+
+        })
+      
+
+
+      //좋아요 버튼 전체적용
+
+      // const swipers = document.querySelector(".swiper-wrapper");
+      // const ul = document.querySelector(".swiper-wrapper ul");
+      // const swipersList = document.querySelectorAll(".swiper-wrapper li");
+      // const swipersLikes = document.querySelectorAll(".like-button");
+      // const swipersLiked = document.querySelectorAll(".liked-button");
+
+
+      // swipersLikes.forEach((button, i) => {
+      //   button.addEventListener("click", (e) => {
+      //     console.log("현재 클릭한 버튼의 list", swipersList[i]);
+      //     if (swipersLiked.display === "none") {
+
+      //     }
+
+          
+      //   })
+
+      // })
+      
+
+
+
+
+        const mainMenus = document.querySelectorAll(".menu-wrap .menu");
+        const subMenuUl = document.querySelectorAll(".sub-menu-wrap ul");
+        const subMenuAll = document.querySelector(".sub-menu-wrap");
+        const subMenus = document.querySelectorAll(".sub-menu-wrap .sub-menu");
+
+        let count = 0;
+        let hoverTimeout; // 타임아웃을 저장할 변수
+
+        mainMenus.forEach((menu) => {
+          menu.addEventListener("mouseover", () => {
+            clearTimeout(hoverTimeout); // 기존에 설정된 타임아웃이 있으면 제거
+            subMenuUl.forEach((ul) => {
+              ul.style.height = "250px";
+              ul.style.backgroundColor = "white";
+            });
+          });
+
+          menu.addEventListener("mouseleave", () => {
+            hoverTimeout = setTimeout(() => {
+             subMenuUl.forEach((ul) => {
+              ul.style.height = "0";
+                ul.style.backgroundColor = "none";
+              });
+            }, 100); // 100ms 지연 후 메뉴를 닫음
+          });
+        });
+
+        subMenus.forEach((sub, i) => {
+          sub.addEventListener("mouseover", () => {
+            clearTimeout(hoverTimeout); // 서브메뉴에서도 마우스 오버 시 타임아웃 제거
+            subMenuUl.forEach((ul) => {
+              ul.style.height = "250px";
+            });
+          });
+
+        sub.addEventListener("mouseleave", () => {
+            hoverTimeout = setTimeout(() => {
+              subMenuUl.forEach((ul) => {
+                ul.style.height = "0";
+              });
+            }, 100); // 100ms 지연 후 서브메뉴를 닫음
+          });
+        });
+      
+        
+    
+
+
+
+
+
+
+
+        
+        
+  </script>
   
 </body>
+
+
 </html>

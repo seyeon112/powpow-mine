@@ -42,15 +42,6 @@ input,select{vertical-align:middle}
   margin-left: 1046px;
 }
 
-.addpic-wrapper button {
-  background-color: #113F8A;
-  border-radius: 20px;
-  color: #FFFFFF;
-  font-size: 14px;
-  line-height: 22px;
-  letter-spacing: -3%;
-  padding: 4px 15px 4px 15px;
-}
 
 .addpic-smallthumbnail img{
   width: 150px;
@@ -87,7 +78,9 @@ input,select{vertical-align:middle}
   letter-spacing: -3%;
   padding: 4px 15px 4px 15px;
   cursor: pointer;
-  margin: 405px 171px 29px;
+  margin: 405px 166px;
+  position: relative;
+  
 }
 
 .choose-tag-button a{
@@ -133,8 +126,16 @@ input,select{vertical-align:middle}
   position: absolute;
   top: 50%;
   right: 30%;
+}
+
+.disable{
   display: none;
 }
+
+.enable {
+  display: flex;
+}
+
 
 
 .photoFrame{
@@ -258,6 +259,11 @@ button.no{
   margin-top: 12px;
 }
 
+.tag-popup-plus {
+  /* display: none; */
+}
+
+
 .tag-popup-select {
   width: 406px;
   height: 274px;
@@ -269,7 +275,7 @@ button.no{
   left: 40%;
   top: 40px;
   z-index: 100;
-  display: none;
+  /* display: none; */
 }
 
 .addpic-pc-relative {

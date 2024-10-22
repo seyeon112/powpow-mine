@@ -79,80 +79,16 @@ body {
 
 }
 
-.recommend-category-post-wrapper ul{
+.swiper-overflow-are {
   display: flex;
+  flex-wrap: wrap;
   width: 1440px;
   height: 302px;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.recommend-category-post-wrapper {
-  position: relative;
-  width: 1440px;
-  height: 302px;
-}
-
-.recommend-category-post-wrapper .right-button {
-  position: absolute;
-  right: -30px;
-  top: 40%;
-  background-color: transparent;
-}
-
-
-
-.recommend-post {
-  width: 220px;
-  height: 302px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  position: relative;
-}
-
-.recommend-post-title {
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -3%;
-  color: #FFFFFF;
-  position: absolute;
-  left: 14px;
-  top: 13px;
 }
 
 .recommend-post-title .h5 {
   font-weight: bold;
 }
-
-.like-buttons {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: transparent;
-  right: 17px;
-  bottom: 17px;
-  cursor: pointer;
-}
-
-.like-button {
-  position: relative;
-  width: 20px;
-  height: 20px;
-}
-.liked-button{
-  position: absolute;
-  right: 0px;
-  display: none;
-}
-
-
-
 
 
 
@@ -369,4 +305,9 @@ body {
 
 .section-last {
   height: 118px;
+}
+
+
+.liked-button {
+  display: none;
 }
