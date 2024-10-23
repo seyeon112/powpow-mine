@@ -80,7 +80,7 @@
                 </label>
                 <label for="upload">
                   <div class="h6">
-                    <div class="upload">PC에서 사진 추가하기</div>
+                    <button class="upload">PC에서 사진 추가하기</button>
                   </div>
                 </label>
                 <input type="file" id="upload">
@@ -177,20 +177,31 @@
   }); 
 
   //이미지 추가하기 
-  const input = document.querySelector("input");
-  const thumbnail = document.querySelector(".picture-area li img");
 
+  //구현 목표 
 
-  input.addEventListener("change", (e) => {
+  //피씨에서 이미지 추가한 걸 리스트에 담기. 
+  //조건문 추가해서 5개 이상이면 알림창으로 이미지는 5개까지만 추가해주세요! 팝업 띄우기
+
+  const imageButton = document.querySelector(".upload");
+  const imageList = document.querySelector(".picture-box-list");
+  const imageListUl = document.querySelectorAll(".picture-box-list ul");
+  const imageListLi = document.querySelectorAll(".picture-box-list li");
+
+  console.log(imageListUl)
+
+  
+  imageButton.addEventListener("click", (e) => {
     const reader = new FileReader();
     reader.readAsDataURL(e.target.files[0])
     reader.onload = (e) => {
       console.log(e)
-      thumbnail.style.backgroundImage = `url(${e.target.result})`;
-      thumbnail.style.backgroundColor = "none"; 
-      
+      imageListLi.style.backgroundImage = `url(${e.target.result})`;
     }
   })
+
+
+
 
   //업로드 확인
   const post = document.querySelector(".upload-post");

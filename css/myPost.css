@@ -137,6 +137,7 @@ body {
   position: absolute;
   top: 11px;
   display: none;
+  right: 0%;
 }
 
 
@@ -167,19 +168,28 @@ body {
   height: 238px;
   /* border: solid 4px black; */
 }
-.others-like img{
-  height: 40px;
-  width: 40px;
+
+
+.like-button {
+  position: relative;
+  cursor: pointer;
+}
+
+.liked-button {
+  position: absolute;
+  cursor: pointer;
 }
 
 .like-number {
   font-size: 14px;
   line-height: 22px;
   letter-spacing: -2%;
+  margin-right: 460px;
+
 }
 
 .others-like{
-  width: 66px;
+  width: 40px;
   height: 40px;
   display: flex;
   flex-wrap: wrap;
@@ -211,7 +221,7 @@ body {
   top: 20px;
   transform: translate(50%);
   box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.2);
-  /* display: none; */
+  display: none;
 }
 
 #delete-post {
@@ -304,6 +314,17 @@ body {
   padding-inline: 26px;
   font-size: 12px;
   letter-spacing: -3%;
+}
+
+.post-comment-writer button {
+  background-color: transparent;
+}
+
+.post-comment-writer input{
+  border: none;
+  width: 370px;
+  outline: none;
+  overflow: hidden;
 }
 
 /* 버튼에 스타일 주기 */
@@ -425,4 +446,12 @@ body {
 
 .user-likes-best-sector{
   height: 108px;
+}
+
+.disable {
+  display: none;
+}
+
+.enable {
+  display: flex;
 }

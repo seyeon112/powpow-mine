@@ -27,143 +27,7 @@ body {
   font-family: 'SpoqaHanSansNeo-Regular';
 }
 
-/* 헤더 부분 */
 
-.header-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  width: 1920px;
-}
-
-
-#header-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 1440px;
-  margin: 0 auto;
-}
-
-#header-wrap #border{
-  border-bottom: solid 1px #E5E5E5;
-}
-
-#header-wrap #nav { 
-  width: 1440px;
-  margin: 0 auto;
-  display: flex;
-  height: 62px; 
-  justify-content: space-between;
-  align-items: center;
-}
-#header-wrap #nav .sector {
-  line-height: 55px;
-  color: black;
-  margin-left: 10px;
-}
-#header-wrap #nav .right {
-  display: flex; 
-  padding : 0 0 0 24px;
-  gap: 9px;
-}
-#header-wrap #nav .left {
-  width: 181px;
-  height: 61px;
-  /* border: 1px solid black; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#header-wrap #nav .left img{ 
-  width: 130px;
-  height: 37px;
-  margin-left: 26px;
-  margin: auto auto;
-}
-#header-wrap #nav .icons img{ 
-  width: 30px;
-  height: 30px;
-  padding: 15px;
- }
-#header-wrap #nav .login { 
-  display: flex;
-  width: 92px;
-  height: 61px;
-  font-size: 16px;
-  border-left: 1px solid black;
-}
-#header-wrap #nav .login a {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  text-decoration-line:none;
-  color: black;
-}
-
-#header-wrap {
-width: 100%;
-}
-
-#header-wrap .logo-wrap {
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 0 0 20px 0;
-}
-
-#header-wrap .logo-wrap img {
-width: 180px;
-padding: 30px 0 20px 0;
-}
-
-#header-wrap .logo-wrap p {
-font-size: 12px;
-color: #767676;
-text-align: center;
-}
-
-#header-wrap .category-wrap {
-  width: 1440px;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  padding: 19px 0 19px 0;
-  border-top: 1px solid #ACACA8;
-  border-bottom: 1px solid #ACACA8;
-  box-sizing: border-box;
-}
-#header-wrap .category-wrap .category {
-display: flex;
-align-items: center;
-margin-left: 26px;
-}
-#header-wrap .category-wrap .category ul {
-display: flex;
-flex-direction: row;
-}
-
-#header-wrap .category-wrap .category ul li {
-list-style: none;
-font-size: 16px;
-list-style: none;
-padding-right: 65px;
-}
-
-#header-wrap .category-wrap .category ul li:first-child{
-font-weight: 900;
-}
-
-#header-wrap .search img {
-padding: 0 12px;
-width: 22px;
-}
 
 .category-wrap .category li a:hover {
   color: #FFC303;
@@ -172,8 +36,12 @@ width: 22px;
 
 .myCommunity-wrapper{
   width: 1920px;
-  height: 1158px;
-  border: solid 4px red;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  /* border: solid 4px red; */
+  position: relative;
 }
 
 .myCommunity{
@@ -183,8 +51,7 @@ width: 22px;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  height: 977px;
-  border: solid 4px black;
+  /* border: solid 4px black; */
 }
 
 .first-section {
@@ -270,62 +137,18 @@ width: 22px;
   margin-bottom: 29px;
 }
 
-.myProfile-button {
-  width: 115px;
-  height: 43px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.follow-button {
-  width: 115px;
-  height: 43px;
+.myProfile-button button{
   background-color: #FFFFFF;
+  color: #131313;
   border-radius: 25px;
-  box-sizing: border-box;
   border: solid 1px #131313;
   font-size: 16px;
   letter-spacing: -4%;
   padding: 11px 34px 11px 34px;
   font-weight: bold;
-  position: relative;
-  z-index: 100;
 }
 
 
-
-.follow {
-  width: 115px;
-  height: 43px;
-  background-color: #FFFFFF;
-  border-radius: 25px;
-  box-sizing: border-box;
-  border: solid 1px #131313;
-  font-size: 16px;
-  letter-spacing: -4%;
-  padding: 11px 34px 11px 34px;
-  font-weight: bold;
-  z-index: 100;
-}
-
-
-.following {
-  width: 115px;
-  height: 43px;
-  background-color: #113F8A;
-  color: #FFFFFF;
-  border-radius: 25px;
-  border: 0;
-  font-size: 16px;
-  letter-spacing: -4%;
-  padding: 11px 34px 11px 34px;
-  font-weight: bold;
-}
-
-.following-button a{
-  color: #FFFFFF;
-}
 
 .myprofile-card-information {
   width: 208px;
@@ -361,10 +184,6 @@ width: 22px;
   top: 16px;
   background-color: transparent;
   position: absolute;
-}
-
-.modify-selector-wrap {
-  display: none;
 }
 
 
@@ -423,7 +242,14 @@ width: 22px;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: flex-start;
+}
+
+.title {
+  width: 300px;
+  height: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  /* border: solid 3px black; */
 }
 
 .my-post .h5{
@@ -444,8 +270,229 @@ width: 22px;
   flex-direction: column;
   justify-content: space-between;
   margin-left: 59px;
+  /* border: solid 4px red; */
 }
 
-.powpow-info {
-  margin-top: 84px;
+
+
+.frame {
+  width: 100dvw;
+  height: 100dvh;
+  position:fixed;
+  left: 0;
+  top: 0;
+  background-color: (0, 0, 0, 0.5);
+  z-index: 10;
+  display: none;
+}
+
+
+.popup-area-follower {
+  width: 500px;
+  height: 634px;
+  border-radius: 20px;
+  border: solid 1px #828282;
+  box-shadow: 2px 4px 4px rgb(0, 0, 0, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  position: absolute; 
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+
+.popup-following-close {
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  cursor: pointer;
+}
+
+
+.pop-up {
+  width: 400px;
+  height: 534px;
+  /* border: solid 1px red; */
+}
+
+.follower-popup {
+  width: 400px;
+  height: 534px;
+  position: relative;
+}
+
+.menu-following {
+  width: 200px;
+  height: 50px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #888888;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-following p{
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+/* my-following-list */
+
+.my-following-list {
+  width: 400px;
+  height: 484px;
+  box-sizing: border-box;
+  border: solid 1px #888888;
+
+}
+
+.my-following-list ul{
+  width: 400px;
+  height: 464px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.following1 {
+  width: 350px;
+  height: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+}
+
+.following1 img {
+  width: 40px;
+  height: 40px;
+}
+
+.following1 p {
+  width: 220px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.following1 button {
+  border-radius: 20px;
+  box-sizing: border-box;
+  border: solid 1px #828282;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -3%;
+  color: #828282;
+  background-color: #FFFFFF;
+  padding: 4px 15px 4px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.following-popup {
+  width: 400px;
+  height: 534px;
+  position: absolute;
+  top: 48px;
+}
+
+.menu-follower {
+  width: 200px;
+  height: 50px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #d9d9d9;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.menu-follower p{
+  color: #888888;
+  font-weight: bold;
+}
+
+.my-follower-list {
+  width: 400px;
+  height: 484px;
+  box-sizing: border-box;
+  border: solid 1px #888888;
+}
+
+.my-follower-list ul {
+  width: 400px;
+  height: 464px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.last-section {
+  width: 100%;
+  height: 200px;
+  /* border: solid 4px red; */
+}
+
+.my-follow {
+  width: 208px;
+  height: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.my-follow button{
+  color: #828282;
+  background-color: transparent;
+  
+}
+
+.popup-area-following {
+  width: 500px;
+  height: 634px;
+  border-radius: 20px;
+  border: solid 1px #828282;
+  box-shadow: 2px 4px 4px rgb(0, 0, 0, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  position: absolute; 
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+
+.popup-follower-close {
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  cursor: pointer;
+}
+
+
+.disable {
+  display: none;
+}
+
+.enable {
+  display: flex;
 }

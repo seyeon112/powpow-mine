@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="/powpowcommunity/css/myPost.css">
   <link rel="stylesheet" href="/powpowcommunity/header.css">
   <link rel="stylesheet" href="/powpowcommunity/index.css">
+  <link rel="stylesheet" href="swiper.html">
+  <link rel="stylesheet" href="/powpowcommunity/css/footer.css">
   <title>myPost</title>
 </head>
 <body>
@@ -107,14 +109,15 @@
           <div class="othersPost-post-detail-wrapper">
             <div class="othersPost-post-detail">
               <div class="others-like">
-                <img src="/powpowcommunity/images/8666647_heart_icon 6.png" alt="좋아요버튼">
-                <p class="like-number">5</p>
+                <img class="like-button enable" src="/powpowcommunity/images/8666647_heart_icon 6.png" alt="좋아요버튼">
+                <img class="liked-button disable" src="/powpowcommunity/images/8666647_heart_icon 2_fill.png" alt="좋아요눌린버튼">
               </div>
+              <p class="like-number">5</p>
               <div class="post-modify-buttons">
                 <button class="post-modify-button">
                   <img src="/powpowcommunity/images/entypo_dots-three-horizontal.png" alt="수정하기">
                   <div class="modify-box">
-                    <a href="#" class="h7" id="delete-post">삭제하기</a>
+                    <a href="#" class="h7" id="delete-post" onclick="buttonEvent();">삭제하기</a>
                     <a href="#" class="h7" id="modify-post">수정하기</a>
                   </div>
                 </button>
@@ -142,10 +145,10 @@
           <div class="post-comment-writing">
             <img src="/powpowcommunity/images/smallprofileimage.png" alt="댓글 작성칸 작은 프로필이미지">
             <div class="post-comment-writer-wrapper">
-              <div class="post-comment-writer">
-                <p>댓글을 작성해 주세요</p>
-                <button class="post-comment-upload"><a href="#">완료</a></button>
-              </div>
+              <form action = "서블릿주소" class="post-comment-writer" method="post">
+                <input type="text" name="comment" placeholder="댓글을 작성해 주세요."></input>
+                <button type="button" class="h7">완료</button>
+              </form>
             </div>
           </div>
         </div>
@@ -196,7 +199,58 @@
 
     <div class="user-likes-best-sector"></div>
 
-    <img src="/powpowcommunity/images/Group 241.png" alt="포포 아래 정보">
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>고객센터 &gt;</h3>
+          <p><span class="highlight">0000-0000</span> <span>09:00~18:00</span></p>
+          <ul class="custom-list">
+            <li>평일: 전체 문의 상담</li>
+            <li>토요일, 공휴일: 포포 배송 주문건 상담</li>
+            <li>일요일: 휴무</li>
+          </ul>
+        </div>
+    
+        <div class="footer-section">
+          <ul>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">채용정보</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보 처리방침</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">안전거래센터</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer-section">
+          <ul>
+            <li><a href="#">입점신청</a></li>
+            <li><a href="#">제휴/광고 문의</a></li>
+            <li><a href="#">POWPOW 신고센터</a></li>
+            <li><a href="#">파트너 개인정보 처리방침</a></li>
+            <li><a href="#">상품권 소개</a></li>
+            <li><a href="#">고객의 소리</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer">
+          <div class="footer-section legal">
+            <p>(주)포포 | 공동 제작 류재은 이진아 김태혁 문세연 신민철 이소연 최도윤 | 서울 강남구 테헤란로 146, 3층 4층</p>
+            <p>contact@powpow.com | 사업자등록번호: 0000000</p>
+            <p>통신판매업신고번호 제2024-서울강남-0000호</p>
+          </div>
+    
+          <div class="footer-section legal2">
+            <p>(주)포포는 통신판매중개자로 거래 당사자가 아니므로, 판매자가 등록한 상품정보 및 거래 등에 대해 책임을 지지 않습니다.</p>
+            <p>단, (주) 포포가 판매자로 등록 판매한 상품은 판매자로서 책임을 부담합니다.</p>
+          </div>
+    
+          <div class="footer-section legal3">
+            <p>Copyright 2024. powpow, Co., Ltd. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
   </div>
   
@@ -204,19 +258,25 @@
 <script>
 
   //취소하는 로직 추가
-  //팔로우
 
-const followButton = document.querySelector(".follow-button");
-  const followingButton = document.querySelector(".following-button");
+   //팔로우 버튼 구현 로직
 
-  followButton.addEventListener("click", () => {
-    if(followingButton.style.display === "none") {
-      followingButton.style.display = "flex";
-      followButton.style.visibility = "hidden";
-        }else {
-          followingButton.style.display = "none";
-        }
+   const followButton = document.querySelector(".follow-button");
+
+  
+
+  followButton.addEventListener("click", (e) => {
+    if(e.target.className === "follow-button") {
+      e.target.className = "following-button";
+      e.target.style.display = "flex";
+      e.target.innerText = "팔로잉";
+    }else{
+      e.target.className = "follow-button";
+      e.target.innerText = "팔로우";
+    }      
   })
+
+
   //수정 버튼
 
   const postButton = document.querySelector(".post-modify-button");
@@ -225,10 +285,43 @@ const followButton = document.querySelector(".follow-button");
   postButton.addEventListener("click", () => {
     if(modifySelector.style.display === "" || modifySelector.style.display === "none") {
       modifySelector.style.display = "flex";
+
     }else {
       modifySelector.style.display = "none";
     }
   })
+
+  //좋아요 버튼 토글하기
+
+  const likeButton = document.querySelector(".like-button");
+  const likedButton = document.querySelector(".liked-button");
+
+  likeButton.addEventListener("click", () => {
+      likedButton.className = "liked-button enable";
+      likeButton.className = "like-button disable";
+    
+  })
+
+  likedButton.addEventListener("click", () => {
+      likedButton.className = "liked-button disable";
+      likeButton.className = "like-button enable";
+    
+  })
+
+
+//댓글 버튼
+  const form = document.querySelector(".post-comment-writer");
+  const comment = document.querySelector(".post-comment-writer input");
+  const commentSubmitButton = document.querySelector(".post-comment-writer button");
+
+  commentSubmitButton.addEventListener("click", () => {
+    if(!comment.value){
+      return alert("댓글을 입력하세요");
+    }
+    form.submit();
+  })
+
+
 
   const mainMenus = document.querySelectorAll(".menu-wrap .menu");
 const subMenuUl = document.querySelectorAll(".sub-menu-wrap ul");
@@ -273,6 +366,11 @@ subMenus.forEach((sub, i) => {
     }, 100); // 100ms 지연 후 서브메뉴를 닫음
   });
 });
+
+    function buttonEvent() {
+        alert("해당 게시물이 성공적으로 삭제되었습니다.")
+      }
+
 
 
 </script>
