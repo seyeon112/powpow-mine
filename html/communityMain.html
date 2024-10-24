@@ -6,6 +6,11 @@
   <link rel="stylesheet" href="/powpowcommunity/index.css">
   <link rel="stylesheet" href="/powpowcommunity/header.css">
   <link rel="stylesheet" href="/powpowcommunity/css/communityMain.css">
+  <link rel="stylesheet" href="/powpowcommunity/css/footer.css">
+  <link rel="stylesheet" href="/powpowcommunity/css/swiper1.css">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <title>포포 커뮤니티 화면</title>
 </head>
 <body>
@@ -103,47 +108,54 @@
         </div>
         <div class="community-main-post-image-wrapper">
           <div class="community-main-post-image">
-            <ul>
-              <li>
-            
-                  <div class="community-main-post-new-image-wrapper">
-                    <a href="#">
+                   <a href="#">
+                      <div class="community-main-post-new-image-wrapper">
                       <div class="main-post-new-image-box">
                         <div class="main-post-new-image"><img src="/powpowcommunity/images/plus.png" alt="추가하기 버튼"></div>
                         <p class="h6">내 게시물 추가하기 💛</p>
                       </div>
+                      </div>
                     </a>
-                  </div>
               
-              </li>
-                <a href="#" class="community-post-image">
-                  <li>
-                    <img src="/powpowcommunity/images/communitycat1.png" alt="내 게시물 이미지">
-                  </li>
-                </a>
-                <a href="#" class="community-post-image">
-                  <li>
-                    <img src="/powpowcommunity/images/communitycat2.png" alt="내 게시물 이미지2">
-                  </li>
-                </a>
-                <a href="#" class="community-post-image">
-                  <li>
-                    <img src="/powpowcommunity/images/communitycat3.png" alt="내 게시물 이미지3">
-                  </li>
-                </a>
+              
+             <!-- Swiper -->
+
+                <div #swiperRef="" class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="/powpowcommunity/images/communitycat1.png" alt="내 이미지">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="/powpowcommunity/images/communitycat2.png" alt="내 이미지2">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="/powpowcommunity/images/communitycat3.png" alt="내 이미지3">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="/powpowcommunity/images/communitycat4.png" alt="내 이미지4">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="/powpowcommunity/images/communitycat5.png" alt="내 이미지5">
+                    </div>
+                  </div>
+                  <div class="swiper-button-next">
+                    <img src="/powpowcommunity/images/버튼.png" alt="우측 버튼">
+                  </div>
+                  <div class="swiper-button-prev">
+                    <img src="/powpowcommunity/images/왼쪽 버튼.png" alt="좌측 버튼">
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              
           
-                <a href="#" class="community-post-image">
-                  <li>
-                    <img src="/powpowcommunity/images/communitycat4.png" alt="내 게시물 이미지4">
-                  </li>
-                </a>
+
+              
+                
           
-              </ul>
+          
               
           </div>
-              <button class="community-post-button" style="cursor: pointer;">
-                <img src="/powpowcommunity/images/버튼.png" alt="버튼">
-              </button>
+           
         </div>
       
     </div>
@@ -157,7 +169,7 @@
       </div>
 
       <div class="others-post-image-wrapper">
-        <ul>
+        
         
           <a href="#" class="new-image">
             <button>
@@ -165,95 +177,82 @@
             <p>내 게시물 추가하기 🐾</p>
             </button>
           </a>
-       
 
-        <li>
-          <img class="post-image" src="/powpowcommunity/images/dog5.png" alt="강아지">
-          <a href="#">
-            <div class="title-likes">
-              <div class="id">
-                <img src="/powpowcommunity/images/profileimage.png" alt="프로필사진">
-                <p class="h5">아이디</p>
-              </div>
-              <a class="like-buttons">
-                <div class="like-button"><img src="/powpowcommunity/images/likebutton.png" alt="좋아요누르기 전"></div>
-                <div class="liked-button"><img src="/powpowcommunity/images/8666647_heart_icon 4_filled_yellow.png" alt="좋아요눌림"></div>
-              </a>
-            </div>
-          </a>
-        </li>
+           <!-- Swiper slide 2-->
 
-        <li>
-          <img class="post-image" src="/powpowcommunity/images/cat3.png" alt="고양이">
-          <a href="#">
-            <div class="title-likes">
-              <div class="id">
-                <img src="/powpowcommunity/images/profileimage2.png" alt="프로필사진">
-                <p class="h5">아이디</p>
-              </div>
-              <a class="like-buttons">
-                <div class="like-button"><img src="/powpowcommunity/images/likebutton.png" alt="좋아요누르기 전"></div>
-                <div class="liked-button"><img src="/powpowcommunity/images/8666647_heart_icon 4_filled_yellow.png" alt="좋아요눌림"></div>
-              </a>
+           <div #swiperRef="" class="swiper mySwiper2">
+            <ul class="swiper-wrapper2">
+              <li class="swiper-slide2">
+                  <a href="#">
+                    <img class="thumbnail" src="/powpowcommunity/images/dog5.png" alt="내 이미지">
+                    <div class="profile-id-wrapper">
+                      <div class="profile-id">
+                        <img src="/powpowcommunity/images/profileimage.png" alt="프사1">
+                        <p class="h5">아이디</p>
+                      </div>
+                  </a>
+                 
+                    <div class="like-buttons">
+                      <img class="like-button enabled" src="/powpowcommunity/images/likebutton.png" alt="좋아요">
+                      <img class="liked-button disabled" src="/powpowcommunity/images/8666647_heart_icon 4_filled_yellow.png" alt="좋아요 눌림">
+                    </div>
+                  </div>
+              </li>
+              <li class="swiper-slide2">
+                  <a href="#">
+                    <img class="thumbnail" src="/powpowcommunity/images/dog5.png" alt="내 이미지">
+                    <div class="profile-id-wrapper">
+                      <div class="profile-id">
+                        <img src="/powpowcommunity/images/profileimage.png" alt="프사1">
+                        <p class="h5">아이디</p>
+                      </div>
+                  </a>
+                 
+                    <div class="like-buttons">
+                      <img class="like-button enabled" src="/powpowcommunity/images/likebutton.png" alt="좋아요">
+                      <img class="liked-button disabled" src="/powpowcommunity/images/8666647_heart_icon 4_filled_yellow.png" alt="좋아요 눌림">
+                    </div>
+                  </div>
+              </li>
+              <li class="swiper-slide2">
+                  <a href="#">
+                    <img class="thumbnail" src="/powpowcommunity/images/dog5.png" alt="내 이미지">
+                    <div class="profile-id-wrapper">
+                      <div class="profile-id">
+                        <img src="/powpowcommunity/images/profileimage.png" alt="프사1">
+                        <p class="h5">아이디</p>
+                      </div>
+                  </a>
+                 
+                    <div class="like-buttons">
+                      <img class="like-button enabled" src="/powpowcommunity/images/likebutton.png" alt="좋아요">
+                      <img class="liked-button disabled" src="/powpowcommunity/images/8666647_heart_icon 4_filled_yellow.png" alt="좋아요 눌림">
+                    </div>
+                  </div>
+              </li>
+             
+              
+            </ul>
+            <div class="swiper-button-next">
+              <img src="/powpowcommunity/images/버튼.png" alt="우측 버튼">
             </div>
-          </a>
-        </li>
-
-        <li>
-          <img class="post-image" src="/powpowcommunity/images/dog6.png" alt="강아지2">
-          <a href="#">
-            <div class="title-likes">
-              <div class="id">
-                <img src="/powpowcommunity/images/profileimage3.png" alt="프로필사진">
-                <p class="h5">아이디</p>
-              </div>
-              <a class="like-buttons">
-                <div class="like-button"><img src="/powpowcommunity/images/likebutton.png" alt="좋아요누르기 전"></div>
-                <div class="liked-button"><img src="/powpowcommunity/images/8666647_heart_icon 4_filled_yellow.png" alt="좋아요눌림"></div>
-              </a>
+            <div class="swiper-button-prev">
+              <img src="/powpowcommunity/images/왼쪽 버튼.png" alt="좌측 버튼">
             </div>
-          </a>
-        </li>
-
-        <li>
-          <img class="post-image" src="/powpowcommunity/images/fish2.png" alt="물고기">
-          <a href="#">
-            <div class="title-likes">
-              <div class="id">
-                <img src="/powpowcommunity/images/profileimage4.png" alt="프로필사진">
-                <p class="h5">아이디</p>
-              </div>
-              <a class="like-buttons">
-                <div class="like-button"><img src="/powpowcommunity/images/likebutton.png" alt="좋아요누르기 전"></div>
-                <div class="liked-button"><img src="/powpowcommunity/images/8666647_heart_icon 4_filled_yellow.png" alt="좋아요눌림"></div>
-              </a>
-            </div>
-          </a>
-        </li>
-
-        <li>
-          <img class="post-image" src="/powpowcommunity/images/bird2.png" alt="새">
-          <a href="#">
-            <div class="title-likes">
-              <div class="id">
-                <img src="/powpowcommunity/images/profileimage5.png" alt="프로필사진">
-                <p class="h5">아이디</p>
-              </div>
-              <a class="like-buttons">
-                <div class="like-button"><img src="/powpowcommunity/images/likebutton.png" alt="좋아요누르기 전"></div>
-                <div class="liked-button"><img src="/powpowcommunity/images/8666647_heart_icon 4_filled_yellow.png" alt="좋아요눌림"></div>
-              </a>
-            </div>
-          </a>
-        </li>
-            
-          <div class="other-post-button">
-            <button>
-              <img src="/powpowcommunity/images/버튼.png" alt="버튼">
-            </button>
+    
           </div>
 
-        </ul> 
+  
+
+  
+      
+
+
+       
+
+        
+            
+          
       </div>
     </div>
 
@@ -317,27 +316,117 @@
       </div>
     </div>
 
-    <div class="community-last-section"></div>
-
-    <div class="powpow-info">
-      <img src="/powpowcommunity/images/Group 241.png" alt="포포 홈페이지 정보">
-    </div>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>고객센터 &gt;</h3>
+          <p><span class="highlight">0000-0000</span> <span>09:00~18:00</span></p>
+          <ul class="custom-list">
+            <li>평일: 전체 문의 상담</li>
+            <li>토요일, 공휴일: 포포 배송 주문건 상담</li>
+            <li>일요일: 휴무</li>
+          </ul>
+        </div>
+    
+        <div class="footer-section">
+          <ul>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">채용정보</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보 처리방침</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">안전거래센터</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer-section">
+          <ul>
+            <li><a href="#">입점신청</a></li>
+            <li><a href="#">제휴/광고 문의</a></li>
+            <li><a href="#">POWPOW 신고센터</a></li>
+            <li><a href="#">파트너 개인정보 처리방침</a></li>
+            <li><a href="#">상품권 소개</a></li>
+            <li><a href="#">고객의 소리</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer">
+          <div class="footer-section legal">
+            <p>(주)포포 | 공동 제작 류재은 이진아 김태혁 문세연 신민철 이소연 최도윤 | 서울 강남구 테헤란로 146, 3층 4층</p>
+            <p>contact@powpow.com | 사업자등록번호: 0000000</p>
+            <p>통신판매업신고번호 제2024-서울강남-0000호</p>
+          </div>
+    
+          <div class="footer-section legal2">
+            <p>(주)포포는 통신판매중개자로 거래 당사자가 아니므로, 판매자가 등록한 상품정보 및 거래 등에 대해 책임을 지지 않습니다.</p>
+            <p>단, (주) 포포가 판매자로 등록 판매한 상품은 판매자로서 책임을 부담합니다.</p>
+          </div>
+    
+          <div class="footer-section legal3">
+            <p>Copyright 2024. powpow, Co., Ltd. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
    
   </div>
 </body>
+
+ <!-- Swiper JS -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+ <!-- Initialize Swiper -->
+ <script>
+   const swiper = new Swiper(".mySwiper", {
+     slidesPerView: 4,
+   
+     spaceBetween: 10,
+    
+     navigation: {
+       nextEl: ".swiper-button-next",
+       prevEl: ".swiper-button-prev",
+     }
+   });
+
+ </script>
+
+
+
+<!-- Initialize Swiper -->
 <script>
-  //누르기 취소하는 법, 전체 적용!
+  const swiper2 = new Swiper2(".mySwiper2", {
+    slidesPerView: 5,
+  
+    spaceBetween: 10,
+   
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    }
+  });
+
+</script>
+
+
+<script>
+  //좋아요 버튼 토글하기
+
   const likeButton = document.querySelector(".like-button");
   const likedButton = document.querySelector(".liked-button");
 
   likeButton.addEventListener("click", () => {
-    if(likedButton.style.display === "none") {
-       likedButton.style.display = "flex";
-       likeButton.style.visibility = "hidden";
-        }else {
-          likedButton.style.display = "none";
-        }
+      likedButton.className = "liked-button enable";
+      likeButton.className = "like-button disable";
+    
   })
+
+  likedButton.addEventListener("click", () => {
+      likedButton.className = "liked-button disable";
+      likeButton.className = "like-button enable";
+    
+  })
+
+
 
   const mainMenus = document.querySelectorAll(".menu-wrap .menu");
 const subMenuUl = document.querySelectorAll(".sub-menu-wrap ul");
@@ -382,6 +471,11 @@ subMenus.forEach((sub, i) => {
     }, 100); // 100ms 지연 후 서브메뉴를 닫음
   });
 });
+
+
+
+
+
 
 
 </script>

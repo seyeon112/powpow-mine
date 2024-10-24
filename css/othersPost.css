@@ -16,6 +16,19 @@ table{border-collapse:collapse;border-spacing:0}
 hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
 input,select{vertical-align:middle}
 
+@font-face {
+  font-family: 'SpoqaHanSansNeo-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'SpoqaHanSansNeo-Regular';
+}
+
+
+
 /* 기본 필드 설정 */
 
 .othersPost-wrapper {
@@ -41,12 +54,6 @@ input,select{vertical-align:middle}
 }
 /* 헤더 영역 */
 
-.othersPost-header {
-  width: 1440px;
-  height: 180px;
-  /* border: 4px solid black; */
-}
-
 .othersPost-header-section {
   height: 27px;
 }
@@ -61,32 +68,30 @@ input,select{vertical-align:middle}
 .othersPost-profile-wrapper {
   width: 586px;
   height: 50px;
+  margin-bottom: 9px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   /* border: solid 4px black; */
 }
+.othersPost-profile-wrapper img{
+  border-radius: 50%;
+}
 
 .othersPost-profile {
-  width: 100px;
+  width: 200px;
   height: 40px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-
-}
-
-.othersPost-profile img {
-  border-radius: 50%;
-
+  gap: 10px;
 }
 
 .member-id {
   letter-spacing: -2%;
   font-size: 14px;
-  font-style: bold;
+  font-weight: bold;
 }
 
 
@@ -95,9 +100,29 @@ input,select{vertical-align:middle}
   height: 40px;
 }
 
+.follow-buttons {
+}
+
 /* 팔로우 버튼 */
 
 .follow-button {
+  width: 65px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  color:#131313;
+  box-sizing: border-box;
+  border: solid 1px #131313;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 12px;
+  letter-spacing: -4%;
+  position: relative;
+}
+
+.following-button {
   width: 65px;
   height: 30px;
   border-radius: 20px;
@@ -109,13 +134,12 @@ input,select{vertical-align:middle}
   justify-content: center;
   font-size: 12px;
   letter-spacing: -4%;
-  
+  position: absolute;
+  top: 11px;
+  display: none;
+  right: 0%;
 }
 
-.ohtersPOst-image img {
-  width: 40px;
-  height: 40px;
-}
 
 .othersPost-image-wrapper {
   width: 586px;
@@ -123,18 +147,20 @@ input,select{vertical-align:middle}
   position: relative;
 }
 
-.othersPost-image-wrapper .left {
+.buttons {
   position: absolute;
-  left: 0;
-  top: 285px;
-  background-color: transparent;
+  width: 586px;
+  height: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  top: 50%
+
 }
 
-.othersPost-image-wrapper .right {
-  position: absolute;
-  right: 0;
-  top: 285px;
+.buttons button{
   background-color: transparent;
+
 }
 
 .othersPost-post-detail-wrapper{
@@ -144,75 +170,26 @@ input,select{vertical-align:middle}
 }
 
 
-
-.others-like button{
-  background-color: transparent;
-}
-
-.others-like img{
-  height: 40px;
-  width: 40px;
-}
-
-.post-modify-button {
-  width: 20px;
-  height: 20px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
+.like-button {
   position: relative;
+  cursor: pointer;
 }
 
-.post-modify-box {
-  width: 75px;
-  height: 75px;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
+.liked-button {
   position: absolute;
-  top: 20px;
-  transform: translate(50%);
-  box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.2);
-  display: none;
+  cursor: pointer;
 }
-
-#delete-my-post {
-  width: 75px;
-  height: 37px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-  border-bottom: solid 1px #D9D9D9;
-}
-
-#modify-my-post {
-  width: 75px;
-  height: 37px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
-}
-
-.post-modify-box a{
-  color: #B00000;
-
-}
-
 
 .like-number {
   font-size: 14px;
   line-height: 22px;
   letter-spacing: -2%;
+  margin-right: 460px;
+
 }
 
 .others-like{
-  width: 66px;
+  width: 40px;
   height: 40px;
   display: flex;
   flex-wrap: wrap;
@@ -227,23 +204,15 @@ input,select{vertical-align:middle}
   display: flex;
   justify-content: center;
   background-color: transparent;
-}
-
-.comment-modify-button {
-  width: 20px;
-  height: 20px;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  background-color: transparent;
   border: 0;
   cursor: pointer;
   position: relative;
 }
 
-.comment-modify-button .modify-box {
+.modify-box {
   width: 75px;
-  height: 25px;
+  height: 75px;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -257,18 +226,27 @@ input,select{vertical-align:middle}
 
 #delete-post {
   width: 75px;
-  height: 25px;
+  height: 37px;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+  border-bottom: solid 1px #D9D9D9;
 }
 
+#modify-post {
+  width: 75px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
 
-.comment-modify-button .modify-box a{
+.modify-box a{
   color: #B00000;
 
 }
-
 
 
 .othersPost-post-detail {
@@ -276,7 +254,11 @@ input,select{vertical-align:middle}
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  margin: 19px 26px;
+  width: 515px;
+  height: 40px;
+  margin-top: 22px;
+  margin-left: 25px;
+  margin-bottom: 25px
 }
 
 .post-content-detail {
@@ -285,22 +267,14 @@ input,select{vertical-align:middle}
   margin: 0 0 22px 26px;
 }
 
-.post-comment-writer input{
+.post-content-detail p{
   font-size: 14px;
   line-height: 22px;
   letter-spacing: -3%;
-  width: 350px;
-  border: none;
   
 }
 
-.post-comment-writer input:focus{
-  outline: none;
-}
 
-#post-comment-upload {
-  background-color: transparent;
-}
 
 .comment-number {
   margin-top: 19px;
@@ -342,9 +316,21 @@ input,select{vertical-align:middle}
   letter-spacing: -3%;
 }
 
+.post-comment-writer button {
+  background-color: transparent;
+}
+
+.post-comment-writer input{
+  border: none;
+  width: 370px;
+  color: #828282;
+  outline: none;
+  overflow: hidden;
+}
+
 /* 버튼에 스타일 주기 */
-.post-comment-writer button{
-  background-color: none;
+.post-comment-upload{
+  background-color: transparent;
   color: #113F8A;
 }
 
@@ -420,10 +406,27 @@ input,select{vertical-align:middle}
   margin: 0 0 0 52px;
 }
 
+.post-comment-none {
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -3%;
+  color: #131313;
+}
+
+.no-comment-section {
+  margin-bottom: 61px;
+}
+
 .comments-section {
   height: 18px;
   width: 100%;
   /* border: solid 4px black; */
+}
+
+
+
+.post-comment-none {
+  margin-left: 241px;
 }
 
 
@@ -450,3 +453,64 @@ input,select{vertical-align:middle}
 .user-likes-best-sector{
   height: 108px;
 }
+
+.disable {
+  display: none;
+}
+
+.enable {
+  display: flex;
+}
+
+/* 이미지 스와이퍼 영역 */
+
+html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+
+    }
+
+    .swiper {
+      height: 586px;
+      width: 586px;
+      border-radius: 20px;
+      /* border: solid 4px red; */
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+    .disable {
+      display: none;
+    }
+    
+    .enable {
+      display: flex;
+    }
+
+    .swiper-button-next:after, .swiper-button-prev:after{
+      display: none;
+    }

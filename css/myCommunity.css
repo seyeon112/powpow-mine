@@ -42,7 +42,9 @@ body {
   justify-content: center;
   /* border: solid 4px red; */
   position: relative;
+  margin: 0 auto;
 }
+
 
 .myCommunity{
   width: 1920px;
@@ -293,7 +295,7 @@ body {
   position: absolute; 
   right: 50%;
   left: 50%;
-  transform: translate(-50%, -20%);
+  transform: translate(-40%, -12%);
 }
 
 .popup-following-close {
@@ -469,7 +471,7 @@ body {
   position: absolute; 
   right: 50%;
   left: 50%;
-  transform: translate(-50%, -20%);
+  transform: translate(-40%, -12%);
 }
 
 .popup-follower-close {

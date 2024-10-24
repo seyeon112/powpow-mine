@@ -1,6 +1,16 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+}
 
 
-.swiper-slide2 {
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
   text-align: center;
   font-size: 18px;
   width: px;
@@ -12,7 +22,7 @@
   border-radius: 20px;
 }
 
-.swiper-slide2 .thumbnail {
+.swiper-slide .thumbnail {
   border-radius: 20px;
   display: block;
   width: 220px;
@@ -20,7 +30,7 @@
   object-fit: cover;
 }
 
-.swiper2 {
+.swiper {
   width: 1200px;
   height: 320px;
   margin: 20px auto;
@@ -52,11 +62,11 @@
   padding-left: 25px;
 }
 
-.thumbnail2 {
+.thumbnail {
   position: relative;
 }
 
-.profile-id-wrapper2 {
+.profile-id-wrapper {
   width: 194px;
   height: 40px;
   display: flex;
@@ -68,7 +78,7 @@
   left: 18px;
 }
 
-.profile-id2 img {
+.profile-id img {
   display: flex;
   flex-wrap: wrap;
   width: 40px;
@@ -108,7 +118,7 @@
 
 
 
-.profile-id-wrapper2 p{
+.profile-id-wrapper p{
   color: #FFFFFF;
   align-items: center;
 }
