@@ -6,100 +6,62 @@
   <title>Document</title>
 </head>
 <body>
+  <label htmlFor="inputFile">
+    <div className={styles.chooseFile}>사진 선택</div>
+  </label>
+   <input
+     type="file"
+     id="inputFile"
+     accept="image/*" 
+     multiple
+     className={styles.imageForm}
+     onChange={handleImageChange}
+  />
 
-  <li class = "hide">
-    <label for ="upload">파일선택</label>
-    <input type = "file" name = "upload" id = "upload" accept = "image/gif, image/png, image/jpeg" multiple="multiple" style = "display:none;">
-</li>
-<div id = "imagePreviews">
-    <ul id = "forUpload-ul" style = "display : none;"></ul>
-</div>
-  
+  <div className={styles.imgContainer}>
+    // 미리보기 이미지 순회하여 화면에 띄우기 
+             {previews?.map((preview, index) => (
+               <div className={styles.imgBox} key={index}>
+                 <Image
+                   src={preview}
+                   width={200}
+                   height={200}
+                   alt={`${preview}-${index}`}
+                 />
+                 <IoMdClose
+                   className={styles.deleteImg}
+                   onClick={() => handleDeletePreview(index)}
+                 />
+               </div>
+             ))}
+           </div>
 </body>
 <script>
 
-let curImageCount = 0;
-let imgSubmitOn = false;
-let fileArray = [];
-$(function(){
-    const upload = document.getElementById("upload");
-    const imagePreviews = document.getElementById("imagePreviews");
-    const uploadUL = document.getElementById("forUpload-ul");
-    let fileArrayIndex = 0;
-    let maxImageCount = 4;
+const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newImages = [...images];
+    const newPreviews = [...previews];
 
-
-    upload.addEventListener("change", function(){
-        let files = this.files;
-
-        curImageCount += files.length;
-
-        if(curImageCount > maxImageCount){
-            curImageCount = uploadUL.childElementCount;
-            alert(maxImageCount + '개까지만 등록 가능합니다.');
-            return;
-        }
-        if(uploadUL.childElementCount > maxImageCount-1){
-            alert(maxImageCount + '개까지만 등록 가능합니다.');
-            return;
-        }
-        for(let i = 0; i < files.length; i++){
-            let file = files[i];
-            let reader = new FileReader(); 
-            reader.readAsDataURL(file);
-
-            reader.onload = function(){
-                uploadUL.style.display = "";
-                let imageSrc = reader.result;
-
-                let imgLi = document.createElement("li");
-                uploadUL.appendChild(imgLi);
-
-                let selectedImg = document.createElement("img");
-                selectedImg.src = imageSrc;
-                selectedImg.className = "preview-img";
-                imgLi.appendChild(selectedImg);
-
-                let delBtn = document.createElement("input");
-                delBtn.type = "button";
-                delBtn.className = "preview-del-btn";
-                delBtn.value = "X";
-                delBtn.dataset.fileIndex = fileArrayIndex;
-                fileArrayIndex++;
-                imgLi.appendChild(delBtn);
-
-                fileArray.push(file);
-            }
-        }
-        checkImg();
-    });
-
-    imagePreviews.addEventListener("click", function (event) {
-        if (event.target.classList.contains("preview-del-btn")) {
-            var fileIndex = event.target.dataset.fileIndex;
-            var imagePreview = event.target.closest("#forUpload-ul > li");
-            imagePreview.remove();
-            fileArray.splice(fileIndex, 1);
-            fileArrayIndex--;
-            curImageCount--;
-            checkImg();
-        }
-    });
-
-    function checkImg(){
-        if(curImageCount > 0){
-            imgSubmitOn = true;
-        }else{
-            imgSubmitOn = false;
-        }
-        if(titleSubmitOn && imgSubmitOn){
-            $('#gallery_submit').css('background-color', 'coral');
-            $('#gallery_submit').attr("disabled", false);			
-        }else{
-            $('#gallery_submit').css('background-color', '#ccc');
-            $('#gallery_submit').attr("disabled", true);			
-        }		
+    for (let i = 0; i < e.target.files!.length; i++) {
+      const file = e.target.files![i];
+      // 이미지 파일 3개로 제한
+      if (newImages.length < 3) {
+        // 이벤트객체의 파일을 newImages에 담기
+        newImages.push(file);
+        // 파일리더 객체 생성
+        const reader = new FileReader();
+        // 파일 읽어온 후 실행되는 콜백함수
+        reader.onload = (e) => {
+          // 읽어온 값을 갱신하기
+          newPreviews.push(e.target!.result as string);
+          setPreviews(newPreviews);
+        };
+        // 파일 객체를 읽어 base64 형태의 문자열로 변환
+        reader.readAsDataURL(file);
+      }
     }
-});
+    setImages(newImages);
+  };
+
 </script>
 </html>

@@ -23,7 +23,7 @@ body {
   border-radius: 20px;
 }
 
-.swiper-slide img {
+.swiper.swiper-wrapper1 .swiper1-img {
   border-radius: 20px;
   display: block;
   width: 280px;
@@ -31,7 +31,8 @@ body {
   object-fit: cover;
 }
 
-.swiper {
+
+.swiper.swiper-wrapper1 {
   width: 1145px;
   height: 280px;
   margin: 20px auto;
@@ -39,6 +40,23 @@ body {
   flex-wrap: wrap;
   overflow: hidden;
 }
+
+.swiper.swiper-wrapper2 {
+  width: 1195px;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.swiper.swiper-wrapper2 .swiper2-img {
+  border-radius: 20px;
+  display: block;
+  width: 220px;
+  height: 300px;
+  object-fit: cover;
+}
+
 
 .append-buttons {
   text-align: center;

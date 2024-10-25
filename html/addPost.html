@@ -71,33 +71,34 @@
     <div class="addpost">
       <div class="picture-box-wrapper">
         <div class="picture-box-list">
-          <ul>
-            <li class="picture-box-big">
+          <label for="upload">
+            <div class="picture-box-big">
               <div class="box-info">
                 <p>버튼을 눌러 <br>사진을 추가해보세요<br>(최대 5장까지 가능)</p>
-                <label for="images">
-                  <div class="image"></div>
-                </label>
-                <label for="upload">
-                  <div class="h6">
-                    <button class="upload">PC에서 사진 추가하기</button>
-                  </div>
-                </label>
-                <input type="file" id="upload">
               </div>
-            </li>
-            <li class="picture-box-small"></li>
-            <li class="picture-box-small"></li>
-            <li class="picture-box-small"></li>
-            <li class="picture-box-small"></li>
+              <input type="file" id="upload">
+            </div>
+          </label>
+            <div class="picture-box-small">
+              <img class="plus" src="/powpowcommunity/images/plus.png" alt="사진 추가">
+            </div>
+            <div class="picture-box-small">
+              <img class="plus" src="/powpowcommunity/images/plus.png" alt="사진 추가">
+            </div>
+            <div class="picture-box-small">
+              <img class="plus" src="/powpowcommunity/images/plus.png" alt="사진 추가">
+            </div>
+            <div class="picture-box-small">
+              <img class="plus" src="/powpowcommunity/images/plus.png" alt="사진 추가">
+            </div>
           </ul>
         </div>
         <div class="upload-box-wrapper">
           <div class="upload-box">
-            <form>
+            <form action="서블릿주소" id="posts" method="post">
               <label for="upload-post">
                 <div class="h6">
-                  <div class="upload-post-button">업로드</div>
+                  <button class="upload-post-button">업로드</button>
                 </div>
               </label>
               <input type="submit" id="upload-post">
@@ -183,31 +184,31 @@
   //피씨에서 이미지 추가한 걸 리스트에 담기. 
   //조건문 추가해서 5개 이상이면 알림창으로 이미지는 5개까지만 추가해주세요! 팝업 띄우기
 
-  const imageButton = document.querySelector(".upload");
-  const imageList = document.querySelector(".picture-box-list");
-  const imageListUl = document.querySelectorAll(".picture-box-list ul");
-  const imageListLi = document.querySelectorAll(".picture-box-list li");
-
-  console.log(imageListUl)
-
   
-  imageButton.addEventListener("click", (e) => {
-    const reader = new FileReader();
-    reader.readAsDataURL(e.target.files[0])
-    reader.onload = (e) => {
-      console.log(e)
-      imageListLi.style.backgroundImage = `url(${e.target.result})`;
-    }
-  })
+
+ 
+
+
+
+
 
 
 
 
   //업로드 확인
-  const post = document.querySelector(".upload-post");
-  const uploadButton = document.querySelector("upload-post");
+  const form = document.querySelector("#posts");
+  const post = document.querySelector("#posts input");
+  const uploadButton = document.querySelector("upload-post-button");
 
-  console.log(".upload-post")
+  console.log(post)
+
+  uploadButton.addEventListener("click", () => {
+    if(!post.value){
+      return alert("작성된 내용이 없습니다!");
+    }else{
+      form.submit();
+    }
+  })
 
 
    

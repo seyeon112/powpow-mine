@@ -301,6 +301,8 @@ ctrl + c + k
   margin: 19px 0 0 0;
   height: 320px;
   width: 1440px;
+  display: flex;
+  align-items: center;
 }
 
 .others-post-image-wrapper ul {
@@ -492,11 +494,11 @@ ctrl + c + k
 /* swiper-slide2 */
 
 .swiper2 {
-  width: 100%;
-  height: 100%;
+  width: 1195px;
+  height: 302px;
 }
 
-.swiper-slide2 {
+.swiper-slide .swiper2-img{
   text-align: center;
   font-size: 18px;
   width: 220px;
@@ -506,6 +508,41 @@ ctrl + c + k
   justify-content: center;
   align-items: center;
   border-radius: 20px;
+  position: relative;
+}
+
+.swiper-slide .profile-info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 194px;
+  height: 40px;
+
+}
+
+.profiles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  width: 100px;
+  height: 40px;
+
+}
+
+
+
+
+
+
+
+
+#id {
+  color: #FFFFFF;
 }
 
 .thumbnail {
@@ -527,7 +564,6 @@ ctrl + c + k
   align-items: center;
   position: absolute;
   bottom: 10px;
- 
 }
 
 .profile-id img {
